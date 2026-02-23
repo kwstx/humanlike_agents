@@ -1,0 +1,9 @@
+{
+  "name": "humanlike-agents-identity",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Standalone Identity & Reputation layer for autonomous agents.",
+  "main": "src/identity/models/PersistentAgentIdentity.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
