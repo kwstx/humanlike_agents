@@ -1,5 +1,6 @@
 import crypto from 'node:crypto';
 import TrustScoringEngine from '../reputation/TrustScoringEngine.js';
+import ReputationEvolutionEngine from '../reputation/ReputationEvolutionEngine.js';
 import AdaptiveGovernanceEngine from '../governance/AdaptiveGovernanceEngine.js';
 
 /**
@@ -102,13 +103,20 @@ class PersistentAgentIdentity {
      * Updates performance metrics and returns a NEW identity instance.
      * This ensures the identity remains a verifiable snapshot while evolving.
      * 
+     * Now integrated with ReputationEvolutionEngine for temporal decay and recovery.
+     * 
      * @param {Object} updates - New metrics to merge
      * @param {string} reason - The reason for the performance update
+     * @param {Array} recentActions - Optional batch of actions for weighted evolution
      * @returns {PersistentAgentIdentity}
      */
-    updatePerformance(updates, reason = "PERFORMANCE_SYNC") {
+    updatePerformance(updates, reason = "PERFORMANCE_SYNC", recentActions = []) {
+        // 1. First, evolve the current state (apply decay and recent behavior impact)
+        let evolvedPerformance = ReputationEvolutionEngine.evolve(this.performance, recentActions);
+
+        // 2. Merge with explicit updates (e.g. ROI, PNL)
         const nextPNL = {
-            ...this.performance.pnl,
+            ...evolvedPerformance.pnl,
             ...(updates.pnl || {})
         };
 
@@ -116,17 +124,26 @@ class PersistentAgentIdentity {
         nextPNL.netProfit = nextPNL.totalRevenue - nextPNL.totalExpenses;
 
         const nextPerformance = {
-            ...this.performance,
+            ...evolvedPerformance,
             ...updates,
-            pnl: nextPNL,
-            lastUpdated: new Date().toISOString()
+            pnl: nextPNL
         };
 
-        // Recalculate trust profile using the dedicated engine
+        // 3. Recalculate trust profile using the dedicated engine
         nextPerformance.trustProfile = TrustScoringEngine.calculateScore(nextPerformance, this.metadata.versionHistory);
         nextPerformance.trustScore = nextPerformance.trustProfile.composite;
 
-        return this.upgrade(reason, `Metrics updated: Composite Trust now ${nextPerformance.trustScore.toFixed(3)}`, null, nextPerformance);
+        return this.upgrade(reason, `Metrics evolved: Composite Trust now ${nextPerformance.trustScore.toFixed(4)}`, null, nextPerformance);
+    }
+
+    /**
+     * Explicitly triggers a reputation evolution cycle (e.g. to apply time decay).
+     * 
+     * @param {Array} recentActions - Optional actions to incorporate
+     * @returns {PersistentAgentIdentity}
+     */
+    evolveReputation(recentActions = []) {
+        return this.updatePerformance({}, "REPUTATION_EVOLUTION", recentActions);
     }
 
     /**

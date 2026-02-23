@@ -8,6 +8,8 @@
  * - High-trust agents gain expanded autonomy and higher resource limits.
  * - Low-trust agents face restricted authority and limited delegation capacity.
  */
+import AgentActivityLedger from './AgentActivityLedger.js';
+
 class AdaptiveGovernanceEngine {
     /**
      * Governance Thresholds and Configurations
@@ -114,7 +116,41 @@ class AdaptiveGovernanceEngine {
      * @param {number} trustScore - The composite trust score (0.0 to 1.0)
      * @returns {Object} A complete governance profile
      */
-    static getGovernanceProfile(trustScore) {
+    /**
+     * Attach an `AgentActivityLedger` instance for recording governance events.
+     * @param {AgentActivityLedger} ledger
+     */
+    static attachLedger(ledger) {
+        if (!(ledger instanceof AgentActivityLedger)) {
+            throw new Error('attachLedger requires an AgentActivityLedger instance');
+        }
+        this._ledger = ledger;
+    }
+
+    /**
+     * Helper to record an action when an agent context is provided.
+     * agentContext: { identity, privateKey }
+     */
+    static _maybeRecord(agentContext, actionType, details = {}) {
+        if (!this._ledger || !agentContext) return null;
+        const { identity, privateKey } = agentContext;
+        if (!identity || !privateKey) return null;
+        try {
+            return this._ledger.addEntry({
+                agentId: identity.id,
+                publicKey: identity.publicKey,
+                privateKey,
+                actionType,
+                details
+            });
+        } catch (err) {
+            // Recording should not break governance logic
+            console.error('Ledger recording failed:', err.message);
+            return null;
+        }
+    }
+
+    static getGovernanceProfile(trustScore, agentContext = null) {
         let level;
 
         if (trustScore >= this.CONFIG.THRESHOLDS.ELITE) {
@@ -131,12 +167,17 @@ class AdaptiveGovernanceEngine {
 
         const config = JSON.parse(JSON.stringify(this.CONFIG.LEVELS[level]));
 
-        return {
+        const profile = {
             level: level,
             ...config,
             appliedAt: new Date().toISOString(),
             trustScoreSnapshot: trustScore
         };
+
+        // Record that a governance profile was generated/applied for this agent
+        this._maybeRecord(agentContext, 'GOVERNANCE_PROFILE_APPLIED', { profile });
+
+        return profile;
     }
 
     /**
@@ -146,9 +187,11 @@ class AdaptiveGovernanceEngine {
      * @param {string} permission 
      * @returns {boolean}
      */
-    static isActionPermitted(trustScore, permission) {
-        const profile = this.getGovernanceProfile(trustScore);
-        return profile.permissions.includes(permission);
+    static isActionPermitted(trustScore, permission, agentContext = null) {
+        const profile = this.getGovernanceProfile(trustScore, agentContext);
+        const allowed = profile.permissions.includes(permission);
+        this._maybeRecord(agentContext, 'PERMISSION_CHECK', { permission, allowed, profileLevel: profile.level });
+        return allowed;
     }
 
     /**
@@ -158,24 +201,30 @@ class AdaptiveGovernanceEngine {
      * @param {number} amount 
      * @returns {Object} { allowed: boolean, reason: string }
      */
-    static validateBudgetRequest(trustScore, amount) {
-        const profile = this.getGovernanceProfile(trustScore);
+    static validateBudgetRequest(trustScore, amount, agentContext = null) {
+        const profile = this.getGovernanceProfile(trustScore, agentContext);
 
         if (amount > profile.budget.singleTransactionLimit) {
-            return {
+            const result = {
                 allowed: false,
                 reason: `Amount exceeds single transaction limit for trust level ${profile.level}`
             };
+            this._maybeRecord(agentContext, 'BUDGET_REQUEST', { amount, result });
+            return result;
         }
 
         if (amount > profile.budget.ceiling) {
-            return {
+            const result = {
                 allowed: false,
                 reason: `Amount exceeds total budget ceiling for trust level ${profile.level}`
             };
+            this._maybeRecord(agentContext, 'BUDGET_REQUEST', { amount, result });
+            return result;
         }
 
-        return { allowed: true, reason: "WITHIN_LIMITS" };
+        const ok = { allowed: true, reason: "WITHIN_LIMITS" };
+        this._maybeRecord(agentContext, 'BUDGET_REQUEST', { amount, result: ok });
+        return ok;
     }
 }
 
