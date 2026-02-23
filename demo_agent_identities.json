@@ -1,0 +1,72 @@
+{
+  "identities": {
+    "did:agent:14da2e20ddbf3b42d352c5d496ad6627a9fcde91d47a7d25649b51f3c5bd8ad0": {
+      "id": "did:agent:14da2e20ddbf3b42d352c5d496ad6627a9fcde91d47a7d25649b51f3c5bd8ad0",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAv93mCBHu1PvzI4lFIpst7y82dpEuYWlCYPY/q6edWtebJCBMjMza\nfMXWYW8ymlPfIV9Wn6NOPDij68NnEaWJZqYxGoAO+SpnisgQUlqfHulbY4okPNDE\naqUttTkuQn3EwsMZMhXDPRBblHOxxko1OsfHDUFvRXioBK107iSyQ4nvyZRoqWwS\nPJQau2C8goNw47EgrvoHX+X6sQuMMOaxjYUAI/6U5yWU0i8762HE9MoMyePmomGH\nBBx2/UQKVoxDeVScv/41cSxcdMtgJzP0+mmqOmJnMI3EDAydg80LklOCuf8AMgFu\nqAFqfOjmV80IOMHOsWvgAt0Q8FRVNU4G9wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "unknown",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:08.901Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:08.901Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on unknown"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:08.901Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:08.901Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    }
+  },
+  "meta": {
+    "schemaVersion": 2
+  },
+  "lastActionTimestamps": {
+    "did:agent:14da2e20ddbf3b42d352c5d496ad6627a9fcde91d47a7d25649b51f3c5bd8ad0": 1771890308917
+  }
+}

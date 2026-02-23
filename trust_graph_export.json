@@ -1,0 +1,337 @@
+{
+  "nodes": [
+    {
+      "id": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+      "trustScore": 0.9325,
+      "trustProfile": {
+        "composite": 0.9325,
+        "dimensions": {
+          "reliability": 1,
+          "efficiency": 0.7,
+          "cooperation": 1,
+          "compliance": 1,
+          "riskSafety": 0.95,
+          "competence": 0.9
+        },
+        "contexts": {
+          "financial": 0.805,
+          "collaborative": 0.99,
+          "compliance": 0.99,
+          "technical": 0.85,
+          "security": 0.98
+        },
+        "timestamp": "2026-02-23T23:46:22.468Z",
+        "metadata": {
+          "dataPoints": 1,
+          "engineVersion": "2.0.0"
+        }
+      },
+      "performance": {
+        "revenue": 0,
+        "pnl": 0,
+        "violations": 0,
+        "count": 0
+      },
+      "connections": {
+        "in": 0,
+        "out": 2
+      }
+    },
+    {
+      "id": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+      "trustScore": 0.9325,
+      "trustProfile": {
+        "composite": 0.9325,
+        "dimensions": {
+          "reliability": 1,
+          "efficiency": 0.7,
+          "cooperation": 1,
+          "compliance": 1,
+          "riskSafety": 0.95,
+          "competence": 0.9
+        },
+        "contexts": {
+          "financial": 0.805,
+          "collaborative": 0.99,
+          "compliance": 0.99,
+          "technical": 0.85,
+          "security": 0.98
+        },
+        "timestamp": "2026-02-23T23:46:22.555Z",
+        "metadata": {
+          "dataPoints": 1,
+          "engineVersion": "2.0.0"
+        }
+      },
+      "performance": {
+        "revenue": 5000,
+        "pnl": 4000,
+        "violations": 0,
+        "count": 5
+      },
+      "connections": {
+        "in": 1,
+        "out": 1
+      }
+    },
+    {
+      "id": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+      "trustScore": 0.9325,
+      "trustProfile": {
+        "composite": 0.9325,
+        "dimensions": {
+          "reliability": 1,
+          "efficiency": 0.7,
+          "cooperation": 1,
+          "compliance": 1,
+          "riskSafety": 0.95,
+          "competence": 0.9
+        },
+        "contexts": {
+          "financial": 0.805,
+          "collaborative": 0.99,
+          "compliance": 0.99,
+          "technical": 0.85,
+          "security": 0.98
+        },
+        "timestamp": "2026-02-23T23:46:22.569Z",
+        "metadata": {
+          "dataPoints": 1,
+          "engineVersion": "2.0.0"
+        }
+      },
+      "performance": {
+        "revenue": 0,
+        "pnl": 0,
+        "violations": 0,
+        "count": 0
+      },
+      "connections": {
+        "in": 2,
+        "out": 0
+      }
+    },
+    {
+      "id": "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647",
+      "trustScore": 0.9325,
+      "trustProfile": {
+        "composite": 0.9325,
+        "dimensions": {
+          "reliability": 1,
+          "efficiency": 0.7,
+          "cooperation": 1,
+          "compliance": 1,
+          "riskSafety": 0.95,
+          "competence": 0.9
+        },
+        "contexts": {
+          "financial": 0.805,
+          "collaborative": 0.99,
+          "compliance": 0.99,
+          "technical": 0.85,
+          "security": 0.98
+        },
+        "timestamp": "2026-02-23T23:46:22.649Z",
+        "metadata": {
+          "dataPoints": 2,
+          "engineVersion": "2.0.0"
+        }
+      },
+      "performance": {
+        "revenue": 0,
+        "pnl": 0,
+        "violations": 1,
+        "count": 0
+      },
+      "connections": {
+        "in": 0,
+        "out": 1
+      }
+    },
+    {
+      "id": "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d",
+      "trustScore": 0.9325,
+      "trustProfile": {
+        "composite": 0.9325,
+        "dimensions": {
+          "reliability": 1,
+          "efficiency": 0.7,
+          "cooperation": 1,
+          "compliance": 1,
+          "riskSafety": 0.95,
+          "competence": 0.9
+        },
+        "contexts": {
+          "financial": 0.805,
+          "collaborative": 0.99,
+          "compliance": 0.99,
+          "technical": 0.85,
+          "security": 0.98
+        },
+        "timestamp": "2026-02-23T23:46:22.611Z",
+        "metadata": {
+          "dataPoints": 1,
+          "engineVersion": "2.0.0"
+        }
+      },
+      "performance": {
+        "revenue": 0,
+        "pnl": 0,
+        "violations": 0,
+        "count": 0
+      },
+      "connections": {
+        "in": 1,
+        "out": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+      "target": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+      "type": "DELEGATION",
+      "weight": 1,
+      "metadata": {
+        "scope": "COMPUTE",
+        "timestamp": "2026-02-23T23:46:22.612Z"
+      }
+    },
+    {
+      "source": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+      "target": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+      "type": "DELEGATION",
+      "weight": 1,
+      "metadata": {
+        "scope": "STORAGE",
+        "timestamp": "2026-02-23T23:46:22.617Z"
+      }
+    },
+    {
+      "source": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+      "target": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+      "type": "COLLABORATION",
+      "weight": 1,
+      "metadata": {
+        "type": "COOPERATION",
+        "outcome": "SUCCESS",
+        "timestamp": "2026-02-23T23:46:22.619Z"
+      }
+    },
+    {
+      "source": "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647",
+      "target": "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d",
+      "type": "COLLABORATION",
+      "weight": 1,
+      "metadata": {
+        "type": "COOPERATION",
+        "outcome": "FAILURE",
+        "timestamp": "2026-02-23T23:46:22.646Z"
+      }
+    }
+  ],
+  "summary": {
+    "totalNodes": 5,
+    "totalEdges": 4,
+    "centralNodes": [
+      {
+        "id": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+        "totalDegree": 2,
+        "inDegree": 2,
+        "outDegree": 0,
+        "collabFrequency": 1,
+        "centralityIndex": 5
+      },
+      {
+        "id": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+        "totalDegree": 2,
+        "inDegree": 1,
+        "outDegree": 1,
+        "collabFrequency": 1,
+        "centralityIndex": 4.5
+      },
+      {
+        "id": "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d",
+        "totalDegree": 1,
+        "inDegree": 1,
+        "outDegree": 0,
+        "collabFrequency": 1,
+        "centralityIndex": 3.5
+      },
+      {
+        "id": "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647",
+        "totalDegree": 1,
+        "inDegree": 0,
+        "outDegree": 1,
+        "collabFrequency": 1,
+        "centralityIndex": 3
+      },
+      {
+        "id": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+        "totalDegree": 2,
+        "inDegree": 0,
+        "outDegree": 2,
+        "collabFrequency": 0,
+        "centralityIndex": 2
+      }
+    ],
+    "highImpact": [
+      {
+        "id": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+        "pnl": 4000,
+        "revenue": 5000,
+        "avgPnl": 800,
+        "successRate": 1,
+        "impactScore": 525,
+        "trustScore": 0.9325
+      },
+      {
+        "id": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+        "pnl": 0,
+        "revenue": 0,
+        "avgPnl": 0,
+        "successRate": 1,
+        "impactScore": 100,
+        "trustScore": 0.9325
+      },
+      {
+        "id": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+        "pnl": 0,
+        "revenue": 0,
+        "avgPnl": 0,
+        "successRate": 1,
+        "impactScore": 100,
+        "trustScore": 0.9325
+      },
+      {
+        "id": "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647",
+        "pnl": 0,
+        "revenue": 0,
+        "avgPnl": 0,
+        "successRate": 0,
+        "impactScore": 0,
+        "trustScore": 0.9325
+      },
+      {
+        "id": "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d",
+        "pnl": 0,
+        "revenue": 0,
+        "avgPnl": 0,
+        "successRate": 0,
+        "impactScore": 0,
+        "trustScore": 0.9325
+      }
+    ],
+    "riskClusters": [
+      {
+        "nodes": [
+          "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647"
+        ],
+        "size": 1,
+        "averageTrust": 0.9325,
+        "totalViolations": 1,
+        "riskLevel": 2.0675
+      }
+    ]
+  }
+}

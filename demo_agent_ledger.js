@@ -1,6 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import AgentActivityLedger from './src/identity/governance/AgentActivityLedger.js';
+import AgentIdentityRegistry from './src/identity/AgentIdentityRegistry.js';
 import PersistentAgentIdentity from './src/identity/models/PersistentAgentIdentity.js';
 
 // Generate an RSA keypair for the demo (PEM)
@@ -11,7 +12,8 @@ const privatePem = privateKey.export({ type: 'pkcs1', format: 'pem' });
 // Construct a persistent identity using the public key
 const identity = new PersistentAgentIdentity({ publicKey: publicPem, originSystem: 'demo' });
 
-const ledger = new AgentActivityLedger();
+const registry = new AgentIdentityRegistry({ storePath: './demo_agent_identities.json' });
+const ledger = new AgentActivityLedger(registry);
 
 // Helper to add demo entries for required categories
 function addDemoEntries() {

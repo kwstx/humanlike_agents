@@ -1,0 +1,1279 @@
+{
+  "identities": {
+    "did:agent:dcc719a703b259230b299d22dc7289c4669d6cbaea51753b2229356b447e0b2c": {
+      "id": "did:agent:dcc719a703b259230b299d22dc7289c4669d6cbaea51753b2229356b447e0b2c",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAxftcGejkQAH/Ml0lGeYoIj5JzPk9q+5Da2/k2IT2eM7fJzv36pjl\naF3S4R4cR0jNjZ4TyjpnB4dKuBI9aecSLxU2BolIk0a3EFI+7OQJZeBAuUDnMr7c\nbsOFl3t25PolS36FDCIWVUNPIWr4vB4saLpbQRz8Rl54SkhKRrgRYr56DXK40AwQ\ndXq/9eLY6+qo68nih5gS21bQCpvoPyLJAn56e1Xtr2bgfZ4pAA0W3ecTfKe9m/y+\niJs5XrLJ2WsvzHq244/IoIkFKeGrPyoFvddV6OvLqRDcYKZm6Ug82EKkx1pSVAJm\n2hxVmKaG1fTAXVPg/KzwBal/8pSW8da03wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:11.939Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:11.939Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:11.940Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:11.939Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:47e9c723e830016114c8a4c655f5b3ec5227fd4971ac1900c4128f6570cf172a": {
+      "id": "did:agent:47e9c723e830016114c8a4c655f5b3ec5227fd4971ac1900c4128f6570cf172a",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAsyW5xBBbOXEUxeLFZZ6d1uCJN0Q/vR+WwPkZ82BsS0BFmlB++e6n\nT6EcEWKd3OS4cfCQuSjodF/KJPfDVkCf5xeaoSMBbR1RMUSPWNzhJk7gYSY3iEEg\nTDBA6T0rGIvKBpPgEllEWD+Na7E+GVgC3bdSBebzAwOWtt30BncF49kjpOuSZ8Wg\nMsgVzZjCdzIb3K//+1LD01ZdYoVbzVLb//ZjtF77P1kB38VdR6a5yGsZyLOftGc/\nYasH2dVf3sf1PA6EU+IfgfJo7pZvxkWidRzVNh1uEyZX4hFTMYdUzWlHcwlsRej5\nWUMVuZwryhw2p0vn3Yiy5jelm4PN1al02wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:11.965Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:11.965Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:11.966Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:11.965Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:995c70f2b6c17799ed488e60b681daea96a2ae943ad4c93dc0e7c23e513a7015": {
+      "id": "did:agent:995c70f2b6c17799ed488e60b681daea96a2ae943ad4c93dc0e7c23e513a7015",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA3n7cOuI8dE6miBpfbpw5XoCM0O4fi0pcBNLsf0qsODKlHvMhbLbV\n/+3A3IajgJ8ppzcGat/XmeZVukAxVsO8jGt+hHjAR2Lb4L/3vUTH2jGrO4MsjKUW\nvN68lPlxFPy/0XOolemJsOz1medNS0FgwFgxUn1Rrh8B19h0pGyqZtnVsFLTryuv\nyDGSWFh1wsTMc8Aa3+ln/zHEafAhGtOf4UMq3KNcGF8hpXluMj9L+yOnqGgrbpC5\ninTECylZrRs0y6IVyriXy9ELWdbj79Tor9kvICX5lqBnQYrj65+g5/OtAENX1Url\nQizDM6ibfwz7tKdu5uGBQj97sobnvNvsBwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:12.046Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:12.046Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:12.047Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:12.046Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:93cd6262b9c1ea4ab7709af92d6e437d052d02ae29dfc162d9007c1ae527cd79": {
+      "id": "did:agent:93cd6262b9c1ea4ab7709af92d6e437d052d02ae29dfc162d9007c1ae527cd79",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA3tWmelB2KjA27E0XJ+r4Ps3iRy2QO8wcxxC2TUdGlnn95q/tCJSe\nw5LihggUHZ4ZnNcvEA6aOKphmkFHpH0Cc2XOH5FdUlPg6CfaTYG/bTKRhtXKvGo/\nPhXhxN0ALZRuE2lER6icbPq9NlZIqJKQWxkQT+zX+SdwdYdx0/6YScriD7KWrihJ\nLJc1NLnOLLMGUibXMaspegA2WOV0H/KBCZLhHMdml1uofiFKciitp2PrynRlXRL6\n1IrDQ1r1/WfDIw3aExSLQNd73CUjB1buQQHlI51A29nVYNz3h4pPVIhzTrwdmoDr\n641pt1+LKGIM2+5ZyNBWQy8iPGtZr+OM/QIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:12.072Z",
+        "identityVersion": "1.0.1",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:12.072Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          },
+          {
+            "version": "1.0.1",
+            "timestamp": "2026-02-23T23:45:12.116Z",
+            "action": "MANUAL_DOWNGRADE",
+            "details": "Metrics evolved: Composite Trust now 0.9325"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 0.2,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:12.116Z",
+          "metadata": {
+            "dataPoints": 2,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:12.116Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:9b4d8d21c25358d90ef82e11b4126b1c5cb88156bb1c1751a31ade04a659cd99": {
+      "id": "did:agent:9b4d8d21c25358d90ef82e11b4126b1c5cb88156bb1c1751a31ade04a659cd99",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAmDQXCmdhy5njhLAGWDo2Nomn1Farfsi+kapgaS8jGvumeGvfJ/T1\nF4gg9L76sRCfXRcY67WF5JShzzqWXP43KYyRzBiry2uVdu7T+pT+I8QKhx6oVYYi\nwXeN0lmSJQj2pPyi732ialLoeD+eswyNEufQxUrpvU7NcKfvPln3zBmwejV9eW8F\nNCL8N+rJ5bfIuwIZJfekNyYGD12faaQbBv1f+5tEr9St+cEgmZNWHMkE+R4/2OWI\nIvpCCHOoFBKMRxchxyumelMwr5vY9aBDs4G5nefg/mkRevh8HmGw98PBffnHSV4G\nRX47dZgse+eg+R/2WC+HBX9YRhVN7oPXewIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:12.100Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:12.100Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:12.100Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:12.100Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:1f6d50980b54011f61cec25daad60f8f6b990769926d2124996ca3ac7331d3e9": {
+      "id": "did:agent:1f6d50980b54011f61cec25daad60f8f6b990769926d2124996ca3ac7331d3e9",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAhnUa+igizB3JT+Z/TKW8glAbeLD50cz1/rguLdRKjfjO7xBd+Y5B\nuvIljU1GHj8yWxqHv/5WjDOJ8m4jJ3UFjkN7TMtlmyn8hoKZNioE+rzDbzS2JYId\n2TbPuDEXjimic7dYleM2jUXtjYxVbR92zcmu2c3kKJkSI9gr2K9X5MAVmS/8m3Nd\nOVwKmfk5PkQKyPL0cjuyuffEB2sq7eCrFQlzjiI9qQrAmUrxn1MjcJDmC3f6x65u\n75MdQ3Xm4py7VLf0eCvrXzyXPTgszkYdaDPFwPX1hmJjutdE3a2+gLK/h4ZqSs7u\n9sxrahnl2ztVOPgssxnqr3MnuHIXvzrgrwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:20.688Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:20.688Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:20.689Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:20.688Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:ea621231fb63f40c0e0ca5bb244b30abd500577d49046436dc54a17b8cabd944": {
+      "id": "did:agent:ea621231fb63f40c0e0ca5bb244b30abd500577d49046436dc54a17b8cabd944",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEArRRkFVDf2rbFfakoydlUt3TbXuru+ueD/p/odwwJvY0tJjN7tbq5\nmyH0vzX1cPdoSXpbVnj844JdO5jaONB1gMxwqi8v4TCwtWuM0530SmodyrtGkgtx\nZvcSyQaUNLKWEBdnVD7pJz6id9bKoK4l+tYmNSdhh53d0WfZPGIMOpvr3PSh1eML\nrOAslhEItNfNpEhTuOwFhssgtFkpF5JLIVJJfS9zjvpR9xlnzMkcqB08QxB+Z1lc\nUVa7eYME+k16NFDrmjmNx3HotyEixNvB2HvIILRyXYO6Bo+i3eI3aAMdcTI9cR0m\nCjerLSqnSfQfNq3AWAHiJScATvPgYAS2bwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:20.760Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:20.760Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:20.760Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:20.760Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:ec4ed5e7964081928fab0179a27df1527a2aaf0aa08ce541cdd1d538c045466f": {
+      "id": "did:agent:ec4ed5e7964081928fab0179a27df1527a2aaf0aa08ce541cdd1d538c045466f",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA0UDy/bwPykOe4YgeauF4IZjWQpkJUwzv3JgYFluR0ldMkSxgd60d\n4Q7YSsEFaecfdMWYBhlq2jnng+KxDN+mIAEGzhmPDVHdHdMPnHKPhrXWr43Hmo/Y\nsR3/1XAsgew6eU14muOGei6wTLyPWseGvT/6azdc+FD1Tko1o9TyAhk7w5YbtqAw\nN+CceFpqRiXzo0xX411PSXhQfzBJjuTIS0R9H83ZUB9vFvcJXh6OiNSZpWMozW9N\nsyHPnh4LLCvMuHLdnpORfs9kisE/dw4jpoZVLrUhAEImD98EeT3vfV8erTJw3+3J\nlXS5qvEHg/OyV9+s7XZP35BXRJLlqLigPQIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:20.792Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:20.792Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:20.792Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:20.792Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:1d3c80aba390ce8f5ba96c7295300558f07e3c7716ca4dcc35148446f0a22c89": {
+      "id": "did:agent:1d3c80aba390ce8f5ba96c7295300558f07e3c7716ca4dcc35148446f0a22c89",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA2JOQifT5k5P/MWRuUTeec32C6fBVTUK0pLqiobJuhxwhZT54TSee\nYdSqcpvekeoDJabEU1SY1Mfpt2wm9u6P8XTgynLs6nHmoxWc7Xb9xD61WP/X/aVd\nWJI+e74rtID2GR5EK1qXx12LCdbP90Y6z30yHgFLERzkJH/p0T6tqVzZam3q7O8i\n2xn7CxLSxE6zSk//9rbD2hR4PZrE/GJPAz+v9+5gvvPPIr1p+KBlYqzc+TMBAqP2\nu1Y/Vvf9+MB1rrXDPLujuTJEzbqOFB4bzAsDKCLjQTIUNgKK1UdJqp3jCCgzrIs4\nNJYrshr3ouP3jtTyYGq3dj55DLixIwMjuwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:20.829Z",
+        "identityVersion": "1.0.1",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:20.829Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          },
+          {
+            "version": "1.0.1",
+            "timestamp": "2026-02-23T23:45:20.886Z",
+            "action": "MANUAL_DOWNGRADE",
+            "details": "Metrics evolved: Composite Trust now 0.9325"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 0.2,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:20.886Z",
+          "metadata": {
+            "dataPoints": 2,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:20.886Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:2de8a76848bda147c4945cca8c98bac02c3439855c9d915db5453b5cdef8e314": {
+      "id": "did:agent:2de8a76848bda147c4945cca8c98bac02c3439855c9d915db5453b5cdef8e314",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAy4TivFhPb7mjSXhTsoMBzKj87Ef5QQRX44V5R68IJwqnqHPjLliL\ng5VwHsP6mOHLqCFb4HPcuIuIVMlRIa0svVCIsm4Ta8NFa/x5Zy5zlNTq15axA5mB\nZPdQMHVqzuOP6lb/mLkbYeSEvJLWCzOuruPmxrv9l565KtODv81dOTzXXqX8V3HL\nYx9eXpIDAOy870X/sWryoxrpE6r+0UWQ9iTI12XSnaVkq9E7IX/4dEJFiCuCPgo0\n/yRZWdY3hJR5wQKfINTzu3jBCp8Y8RdPMazfeV56iHzdDCxQkq+TqCdzK+Yv+XLn\nx9omUDuGf0OLLSQ5iSlNsDvXYr/HqOoGtwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:45:20.875Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:45:20.875Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:45:20.875Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:45:20.875Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:de9033ee1c5a233cd448e75b0ad1b5edc0b399535b10a304d36d3dceb5480532": {
+      "id": "did:agent:de9033ee1c5a233cd448e75b0ad1b5edc0b399535b10a304d36d3dceb5480532",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAxfQEiF7NSEhcvKoPv/sY+pkGSuNjACLMxa7hFsxftaRDgXTO7xjo\nuZ+xMSocd05pbg5kWBDMutsqsUjSF9+LAmtrJNM4WyKPgaV8uV3gNB0C7dNapEuo\nLws6CZiGDl3eJwnkg2KNsg0St6Mhk36TT7HQtOaIOH7vxiLykzxKuYCBqYhprKja\nqCc4mwopFGDcq1QiJKnZNIM6NRkioUOeO0dTjH5dTLyafgq4ZBqBUahGLyaJj3KY\nc7dgHMrhFIvm5lQfV54BHDm0DQir9+jbW0y79+BqmOqE8VnwYglq74qlOZVMJzbT\nSqbSOnROG5/wfRA3oEh7IWNsSgCMSQb1twIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:01.949Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:01.949Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:01.950Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:01.949Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:3085ccca93bd8e28485cdb25737462144ac27ec4cd9b4a7e7ba422a70feb2069": {
+      "id": "did:agent:3085ccca93bd8e28485cdb25737462144ac27ec4cd9b4a7e7ba422a70feb2069",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAinJYOwxP4n5yncAmufvnI6jgWBH5IBnM8za3+nYzVbzksWA4he7f\ns9jBNoA0RKseiyJSktsMw4bu1PjYIG1mnALpvZCA1OuTBD8j045PelyyHUmlQbnB\nauBr/wXIkW0x+MQ4jwzaPiPetn8xgqm2WDqGsZr8OZ6Kh3bCbmPs+w1NAEOOZxp1\nVGzX9AmcEj0HKaZVp4JKtcssLyGb0Z1T58+g2+3BWbiY42IPlUsjMtHj+Popcyga\niUIJutEgFzMivXqYfNPa7pZyrwlDKXixk1z/Vpr5FavVHHxIfYHhcANgUIJgqSaC\nay2Vx+Z0hSNLBIyImJPdn8OVBlmZ9qAx2wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:01.984Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:01.984Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:01.984Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:01.984Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:80d57bb461782753ae1520376b7cef234b193bfffb2b7a37b5678398899c0b7c": {
+      "id": "did:agent:80d57bb461782753ae1520376b7cef234b193bfffb2b7a37b5678398899c0b7c",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAppYeI3v1+lDJCeAC50ZMBlWdKRgL3LNWkpOfdrXSmRmlxFTauwlj\n87bh0zBUc3Vk9p3tzvDNYs2b9dO663sxRb0dYGQImcU/vYp+COu39slo55OJhi2d\nYocBwbrjh5CXQWTA/QMcaYu+JJz/xDBlgZfebJnoZlX30vqLKK1hJjrdaK+/VjCa\nzYznclS6FQLyGfPDAs+ZFFZisLlwiqnHIP0HiQsF56v1USwuqJFl1ruOSTlX5Io/\n4SMXN0xmOIUpvK/UWNAasusYiGbqlZME5iEMe5a/CyI9wQtvYE6Ub3qx55n6Nhvd\nQFM86F4Brpy82jBH9lAywhd05jVgiOEzqQIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:02.004Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:02.004Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:02.004Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:02.004Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:593f7e6042591d670e763c66b64f04cc43da7943f8f12cc919c28271fb17d809": {
+      "id": "did:agent:593f7e6042591d670e763c66b64f04cc43da7943f8f12cc919c28271fb17d809",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA0ygDYFFC3y2+Lss13qg5i/TJRHrABPn3qigKhBcd2sipHf6ZnHWv\n04vxlw291gzm3UMbrhMkZQAE2pbMivKwLsv1ETbWMepT/DzP/JR9YdR/4EMim0ld\n1B+Kfo6uatRS7DB9CItsKriqDNKoCS3GeqiItJBZ9yHqBpr950zf6mLb1zpWhD25\nJ3TpsKEY3ON+PTb9JJSFxsCUUtFls4xUqBs42FzzfUWrGOlwFBmdjV2/h37BviVj\nU+BmlLKhUy/zgYQD4OLmGz7xmoeL6v40oxvjHoKhOw3/XBpBwgP0FkOTFS86RdHH\nzue/B/dSoLz3BXIQCfecuSzd7y+GxH5B4wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:02.052Z",
+        "identityVersion": "1.0.1",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:02.052Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          },
+          {
+            "version": "1.0.1",
+            "timestamp": "2026-02-23T23:46:02.201Z",
+            "action": "MANUAL_DOWNGRADE",
+            "details": "Metrics evolved: Composite Trust now 0.9325"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 0.2,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:02.201Z",
+          "metadata": {
+            "dataPoints": 2,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:02.200Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:263ca89308ab2a483e3ce3c67cb485c5f02a4db5f105ec05dc56491edade1ddf": {
+      "id": "did:agent:263ca89308ab2a483e3ce3c67cb485c5f02a4db5f105ec05dc56491edade1ddf",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAqr9B9eEzcwzB6pUBnUgXVHJm+SjHHfvnfvWLq7D2caPMannkxAx8\ng6NIbfRRGWoX9AdyLpHrwfvCOyOIXQFgYVZ/RHJa3OvTGnJ7vU1TfeRgnl4RbwVw\nGV39V8ALmXmlO+adQIKqrs5KjZymrxRUTsiB4bsyjz0VOcq0tSe7NXbK5ALa867U\n7XA+5w2T8wt0g0LaQZahlW5sA7wl1Be2dQqvNjYr0cLi2hoLjKpgf/mcNMgcL2Ht\nf+txepFqKG2eizAJCPpuKjJCrwWowzzYO3pcmxacTUTWaffVo731G1p7AaXUyIf9\ntJJY0dyJS/WFjauFu0CmDdykqdwrioSoRQIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:02.171Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:02.171Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:02.171Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:02.171Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa": {
+      "id": "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4w4yr4LOvR01reIvgTNg4kyqNtvjXDUVwkvb4WxX5VTjgc3ZY7C9\nexUo5X3yjEJJ62QpSmmHnU/cVRAAa2i0tCko7rNv0CB+LtqK8Cd5W7DRwgq0wREQ\nw8EniR+7mWMat/Umube8aCYbfD8Qz+tlkJu9gY3dlm54ZfSWC5yMg6nCy6iHdhxW\nCFVlVq0oE/BFwFpkSetrktqyvm34EEOOIIKTODvlYILN6/VVLKb6/sE3hprbSjzm\nCvbktTUTn3uV9/oWhdJ3lXNraC+LI2RBDD1dh2AON7We3wE2tchEcd2jC/Lu8AA2\ntdr7GNDrrAw7t1eqpRqrpGmuGgo0LqWkCwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:22.467Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:22.467Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:22.468Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:22.467Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049": {
+      "id": "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAn6jW9O382yEf0gkRbzX8a4qqhqu6QlhBzvnVlryKCVYf1v0heSsP\nganWEcPkkXNfhbpgJ1zcX3IRC9/hbEL3jiZ/RrnTyEqBL3/QSMEQB9w1knocP3Cs\nDr5lULqbTK+uhv1EcYWyzdGaXlDvy01De/Jy1tcQjCZQSwTV7u1NMkFqAiBah+nK\nAk9dBsTn5G5J9Lea9PpBt9xBuwDdzfljQnYnaHHj4p7s7SvR9zPfauMwYEPAS6h7\noP9as4Lv0DkAYuQszQCl+i35ld8ySJhLSC/ouQZpfdDLeREZeTm37UzWdGGFHHgK\nys+fFWIi6YxDBmGOu/LWhC9xEthWHqZB6wIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:22.555Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:22.555Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:22.555Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:22.555Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4": {
+      "id": "did:agent:048b11dfbb3f4813157aec55a65e70c3bfd3f6210e5ef6534d9f8639de26fdc4",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEArbuXHpH6VB6R65jfdQx6w2RNFh8XaUQ326yT5ioV+z7jdi4JStya\nV3Swr2oubAvVb1N2ECwHa8XQQaaEOYeE+7JoOC1ikKQarOBT+Rk/A3Bd6mNn0+5R\n0DJLnDJFmdqeOHBy1Rq775fodVDxAbbQbMw1ArNVqx0lO8nNYqGYN4Rk6AVry1EX\n059AJw4tiI0wfxna5DMaS1SGQIte+9+Dn5B4yCQSu1pbXTUsB+NU1Uum3hRdv6SD\nJtFDkzTzLbudij1j6Gt7secdeuo5BZjgjeMYCEwOlf9wNmtWqkpdx79+kYnzFO8R\nODvr+N8DrEFQdj42QarB+QamAUEBl27i3QIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:22.569Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:22.569Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:22.569Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:22.569Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647": {
+      "id": "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA5YfkpOR6Hjg3FpZc1B2S5wdSsVebXYLwU54nXexIA6dbrK9ZAqS+\ngtLnKs3EyVMaunZ5aRaZY17oXMx2Ebu7QP0o1NWZ7SR7mvi6TO+NIG5nBYFR6lvp\nxpBpgBVQ5zfZyCBAhd0qFhdm0Mwn5i2XK4hwueWV7J1qomu1fh86UEWFvX/4WSxd\nPPSPZqQK98iC76VTY7wZebdr4plpfOgV8nmfEvavjAbDKvSXfe+VF9Moz03JHkBp\nZX8FtE7Teeu/o5heIrq1IlyO0kVBGMuc2UV3ejv/TdRSW51DoHRcCANEpL7WD/h/\n9AeM0K2yX995UEjyLgm/20I3zZEdNHKfmwIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:22.585Z",
+        "identityVersion": "1.0.1",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:22.585Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          },
+          {
+            "version": "1.0.1",
+            "timestamp": "2026-02-23T23:46:22.649Z",
+            "action": "MANUAL_DOWNGRADE",
+            "details": "Metrics evolved: Composite Trust now 0.9325"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 0.2,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:22.649Z",
+          "metadata": {
+            "dataPoints": 2,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:22.649Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    },
+    "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d": {
+      "id": "did:agent:c7574203785ffc204c9e6f890d29d8b8910ec0fb77a3791c45e5c9de1511d07d",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAwanR6yFDlevuuNE7ug1nS7Px3oiFJ/cyzilA8zTkwAQ8RdmRFJfq\nKvsSWW+gQHSn7x71Th7a85d7cNzmu4TfWLIxkFp7XyOgBw1T8UMAWlB0FEkpiWOh\nkfVUj7/yQ7tAEQ593hJW1Ba82wro5Zx5Uax1Iu4gMPTm/SucA7pwJOULdUEYqN4p\n/PtLpGBCJ4gjkjvtWxb9Jix7DGKUynma+VGfwZ9WiJE6n9h00Pw6tQDXlH+aMOPw\nwFlD+8tEakCJH4fjk6kFhJjbNSDNZaRyKcgPlQUFi9C1evPOWst3ZzObz8eJyTm3\ncO1zV5+fWMttKKhSrSiJUHzG2XTIsxJPXQIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "demo-system",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:46:22.611Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:46:22.611Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on demo-system"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:46:22.611Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:46:22.611Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2
+    }
+  },
+  "meta": {
+    "schemaVersion": 2
+  },
+  "lastActionTimestamps": {
+    "did:agent:de9033ee1c5a233cd448e75b0ad1b5edc0b399535b10a304d36d3dceb5480532": 1771890362178,
+    "did:agent:3085ccca93bd8e28485cdb25737462144ac27ec4cd9b4a7e7ba422a70feb2069": 1771890362191,
+    "did:agent:593f7e6042591d670e763c66b64f04cc43da7943f8f12cc919c28271fb17d809": 1771890362198,
+    "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa": 1771890382617,
+    "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049": 1771890382638,
+    "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647": 1771890382646
+  }
+}

@@ -9,8 +9,9 @@ import fs from 'node:fs';
  * The ledger supports verification of the full chain and individual signatures.
  */
 class AgentActivityLedger {
-    constructor() {
+    constructor(registry = null) {
         this.entries = [];
+        this.registry = registry; // optional AgentIdentityRegistry to validate identities/signatures
     }
 
     /**
@@ -45,9 +46,9 @@ class AgentActivityLedger {
      * @param {string} params.actionType - One of: DELEGATION, NEGOTIATION, ECONOMIC, POLICY_VIOLATION, SANDBOX_PROPOSAL, COOPERATION
      * @param {Object} params.details - Structured details about the action
      */
-    addEntry({ agentId, publicKey, privateKey, actionType, details = {} }) {
-        if (!agentId || !publicKey || !privateKey || !actionType) {
-            throw new Error('agentId, publicKey, privateKey and actionType are required');
+    addEntry({ agentId, publicKey, privateKey, actionType, details = {}, signature = null, originSystem = null }) {
+        if (!agentId || !actionType) {
+            throw new Error('agentId and actionType are required');
         }
 
         const index = this.entries.length;
@@ -70,17 +71,54 @@ class AgentActivityLedger {
         const entryHash = AgentActivityLedger._hash(serialized);
         entry.hash = entryHash;
 
-        // Sign the entry hash using RSA-PSS (compatible with PersistentAgentIdentity.verifySignature)
-        const signature = crypto.sign(
-            'sha256',
-            Buffer.from(entryHash),
-            {
-                key: privateKey,
-                padding: crypto.constants.RSA_PKCS1_PSS_PADDING
+        // If a signature was provided, prefer validating it through the registry if available.
+        if (signature) {
+            // If registry is present, validate the signed action (replay protection, revocation, origin checks)
+            if (this.registry) {
+                const res = this.registry.validateAction({ agentId, publicKey, message: entryHash, signature, timestamp: timestamp, originSystem });
+                if (!res.valid) throw new Error(`Signature validation failed: ${res.reason}`);
+            } else {
+                // Local verification without registry
+                const verified = crypto.verify(
+                    'sha256',
+                    Buffer.from(entryHash),
+                    {
+                        key: publicKey,
+                        padding: crypto.constants.RSA_PKCS1_PSS_PADDING
+                    },
+                    Buffer.from(signature, 'hex')
+                );
+                if (!verified) throw new Error('Invalid signature provided');
             }
-        );
+            entry.signature = signature;
+        } else {
+            // No signature provided: if privateKey is present, sign locally.
+            if (!privateKey) {
+                throw new Error('Either signature or privateKey must be provided to add an entry');
+            }
 
-        entry.signature = signature.toString('hex');
+            const sig = crypto.sign('sha256', Buffer.from(entryHash), { key: privateKey, padding: crypto.constants.RSA_PKCS1_PSS_PADDING });
+            const sigHex = sig.toString('hex');
+
+            // If registry is available, ensure identity exists and validate the signed action
+            if (this.registry) {
+                // Register identity if absent (bind publicKey -> originSystem)
+                try {
+                    const existing = this.registry.getRaw(agentId);
+                    if (!existing) {
+                        // Try to register; if registration fails, bubble up
+                        this.registry.registerIdentity({ publicKey, originSystem: originSystem || 'unknown', id: agentId });
+                    }
+                } catch (err) {
+                    throw new Error(`Identity registration failed: ${err.message}`);
+                }
+
+                const res = this.registry.validateAction({ agentId, publicKey, message: entryHash, signature: sigHex, timestamp: timestamp, originSystem });
+                if (!res.valid) throw new Error(`Signature validation failed: ${res.reason}`);
+            }
+
+            entry.signature = sigHex;
+        }
 
         // Freeze the entry to prevent in-memory mutation
         Object.freeze(entry);
@@ -165,10 +203,10 @@ class AgentActivityLedger {
         return path;
     }
 
-    static loadFromFile(path) {
+    static loadFromFile(path, registry = null) {
         const raw = fs.readFileSync(path, { encoding: 'utf8' });
         const parsed = JSON.parse(raw);
-        const ledger = new AgentActivityLedger();
+        const ledger = new AgentActivityLedger(registry);
         ledger.entries = (parsed.entries || []).map(e => Object.freeze(e));
         return ledger;
     }
