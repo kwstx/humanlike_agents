@@ -1,5 +1,6 @@
 import crypto from 'node:crypto';
 import TrustScoringEngine from '../reputation/TrustScoringEngine.js';
+import AdaptiveGovernanceEngine from '../governance/AdaptiveGovernanceEngine.js';
 
 /**
  * PersistentAgentIdentity
@@ -140,12 +141,17 @@ class PersistentAgentIdentity {
      * Used for delegation decisions.
      */
     getAuthorityLevel() {
-        const score = this.performance.trustScore;
-        if (score >= 0.9) return "ELITE_AUTHORITY";
-        if (score >= 0.7) return "HIGH_TRUST";
-        if (score >= 0.4) return "STANDARD_OPERATIONAL";
-        if (score >= 0.2) return "RESTRICTED";
-        return "PROBATIONARY";
+        return AdaptiveGovernanceEngine.getGovernanceProfile(this.performance.trustScore).level;
+    }
+
+    /**
+     * Returns the full governance profile (limits, permissions, context)
+     * based on current trust score.
+     * 
+     * @returns {Object}
+     */
+    getGovernanceProfile() {
+        return AdaptiveGovernanceEngine.getGovernanceProfile(this.performance.trustScore);
     }
 
     /**
@@ -192,7 +198,8 @@ class PersistentAgentIdentity {
             originSystem: this.originSystem,
             metadata: this.metadata,
             performance: this.performance,
-            authority: this.getAuthorityLevel()
+            authority: this.getAuthorityLevel(),
+            governance: this.getGovernanceProfile()
         };
     }
 
