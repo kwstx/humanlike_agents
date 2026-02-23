@@ -5,6 +5,8 @@ import crypto from 'node:crypto';
  * 
  * Represents a globally unique, cryptographically verifiable identifier for an autonomous agent.
  * Designed to be persistent across sessions, deployments, and orchestration layers.
+ * 
+ * Now extended to include economic performance and cooperative metrics as first-class identity attributes.
  */
 class PersistentAgentIdentity {
     /**
@@ -13,8 +15,9 @@ class PersistentAgentIdentity {
      * @param {string} config.originSystem - The identifier of the system/platform where the identity was first created.
      * @param {string} [config.id] - Override ID (only for loading existing identities).
      * @param {Object} [config.metadata] - Optional existing metadata for reconstruction.
+     * @param {Object} [config.performance] - Optional performance metrics for reconstruction.
      */
-    constructor({ publicKey, originSystem, id = null, metadata = null }) {
+    constructor({ publicKey, originSystem, id = null, metadata = null, performance = null }) {
         if (!publicKey) {
             throw new Error("Cryptographic public key is mandatory for PersistentAgentIdentity.");
         }
@@ -47,9 +50,29 @@ class PersistentAgentIdentity {
             };
         }
 
-        // Freeze instances logic to enforce immutability of core identity properties
+        // Economic and Performance Metrics (First-class attributes)
+        if (performance) {
+            this.performance = performance;
+        } else {
+            this.performance = {
+                pnl: {
+                    totalRevenue: 0,
+                    totalExpenses: 0,
+                    netProfit: 0
+                },
+                budgetEfficiency: 1.0, // Default to neutral/optimal
+                roi: 0.0,
+                cooperationScore: 1.0, // Default to cooperative
+                trustScore: 0.5,        // Initial baseline trust
+                lastUpdated: this.metadata.creationTimestamp
+            };
+        }
+
+        // Freeze instances to enforce immutability of the identity state
         Object.freeze(this.metadata);
         Object.freeze(this.metadata.versionHistory);
+        Object.freeze(this.performance);
+        Object.freeze(this.performance.pnl);
     }
 
     /**
@@ -63,13 +86,70 @@ class PersistentAgentIdentity {
     }
 
     /**
-     * Logs a version change (e.g., key rotation or system migration).
-     * This returns a NEW instance to maintain immutability patterns if desired, 
-     * or updates the internal history if used as a mutable record.
+     * Updates performance metrics and returns a NEW identity instance.
+     * This ensures the identity remains a verifiable snapshot while evolving.
      * 
-     * For this model, we'll implement a 'cloneWithUpdate' pattern.
+     * @param {Object} updates - New metrics to merge
+     * @param {string} reason - The reason for the performance update
+     * @returns {PersistentAgentIdentity}
      */
-    upgrade(action, details, newVersion = null) {
+    updatePerformance(updates, reason = "PERFORMANCE_SYNC") {
+        const nextPNL = {
+            ...this.performance.pnl,
+            ...(updates.pnl || {})
+        };
+
+        // Recalculate net profit if revenue or expenses changed
+        nextPNL.netProfit = nextPNL.totalRevenue - nextPNL.totalExpenses;
+
+        const nextPerformance = {
+            ...this.performance,
+            ...updates,
+            pnl: nextPNL,
+            lastUpdated: new Date().toISOString()
+        };
+
+        // Recalculate trust score based on new performance data
+        nextPerformance.trustScore = this._calculateTrustScore(nextPerformance);
+
+        return this.upgrade(reason, `Metrics updated: Trust Score now ${nextPerformance.trustScore.toFixed(3)}`, null, nextPerformance);
+    }
+
+    /**
+     * Core logic for determining agent trust based on economic and behavioral data.
+     * @private
+     */
+    _calculateTrustScore(p) {
+        // Simple weighted model:
+        // 30% Economic Profitability (ROI/PNL trend)
+        // 30% Budget Efficiency
+        // 40% Cooperative contribution
+
+        const economicFactor = Math.min(Math.max(p.roi / 100, 0), 1); // Normalize ROI
+        const efficiencyFactor = Math.min(Math.max(p.budgetEfficiency, 0), 1);
+        const cooperationFactor = Math.min(Math.max(p.cooperationScore, 0), 1);
+
+        const score = (economicFactor * 0.3) + (efficiencyFactor * 0.3) + (cooperationFactor * 0.4);
+        return parseFloat(score.toFixed(4));
+    }
+
+    /**
+     * Returns the authority level of the agent based on its trust score.
+     * Used for delegation decisions.
+     */
+    getAuthorityLevel() {
+        const score = this.performance.trustScore;
+        if (score >= 0.9) return "ELITE_AUTHORITY";
+        if (score >= 0.7) return "HIGH_TRUST";
+        if (score >= 0.4) return "STANDARD_OPERATIONAL";
+        if (score >= 0.2) return "RESTRICTED";
+        return "PROBATIONARY";
+    }
+
+    /**
+     * Logs a version change and returns a NEW instance.
+     */
+    upgrade(action, details, newVersion = null, updatedPerformance = null) {
         const nextVersion = newVersion || this._incrementVersion(this.metadata.identityVersion);
         const newHistory = [
             ...this.metadata.versionHistory,
@@ -89,7 +169,8 @@ class PersistentAgentIdentity {
                 ...this.metadata,
                 identityVersion: nextVersion,
                 versionHistory: newHistory
-            }
+            },
+            performance: updatedPerformance || this.performance
         });
     }
 
@@ -100,22 +181,21 @@ class PersistentAgentIdentity {
     }
 
     /**
-     * Export the identity to a plain object for persistence or transmission.
+     * Export the identity to a plain object.
      */
     toObject() {
         return {
             id: this.id,
             publicKey: this.publicKey,
             originSystem: this.originSystem,
-            metadata: this.metadata
+            metadata: this.metadata,
+            performance: this.performance,
+            authority: this.getAuthorityLevel()
         };
     }
 
     /**
      * Cryptographically verify if a message was signed by this identity's public key.
-     * @param {Buffer|string} message 
-     * @param {string} signature - hex or base64 signature
-     * @returns {boolean}
      */
     verifySignature(message, signature) {
         try {
