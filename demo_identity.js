@@ -17,7 +17,8 @@ const agentIdentity = new PersistentAgentIdentity({
 });
 
 console.log("Agent ID:", agentIdentity.id);
-console.log("Initial Trust Score:", agentIdentity.performance.trustScore);
+console.log("Initial Composite Trust Score:", agentIdentity.performance.trustScore);
+console.log("Initial Trust Dimensions:", JSON.stringify(agentIdentity.performance.trustProfile.dimensions, null, 2));
 console.log("Initial Authority:", agentIdentity.getAuthorityLevel());
 
 // 3. Simulate Economic Performance Update
@@ -33,18 +34,23 @@ const performingAgent = agentIdentity.updatePerformance({
 }, "QUARTERLY_PERFORMANCE_REVIEW");
 
 console.log("Updated P&L:", performingAgent.performance.pnl);
-console.log("New Trust Score:", performingAgent.performance.trustScore);
+console.log("New Composite Trust Score:", performingAgent.performance.trustScore);
+console.log("Projected Trust Contexts:", JSON.stringify(performingAgent.performance.trustProfile.contexts, null, 2));
 console.log("New Authority:", performingAgent.getAuthorityLevel());
 
 // 4. Simulate Low Performance (Impact on Trust)
 console.log("\n--- Simulating Performance Drop (Penalty) ---");
 const restrictedAgent = performingAgent.updatePerformance({
     budgetEfficiency: 0.4,
-    cooperationScore: 0.1, // Agent became uncooperative
+    cooperationScore: 0.1,
+    policyViolations: 3, // New violation metric
+    riskExposure: 0.8,    // High risk detected
     roi: -20
-}, "INCIDENT_REPORT_UNCOOPERATIVE_BEHAVIOR");
+}, "INCIDENT_REPORT_HIGH_RISK_BEHAVIOR");
 
-console.log("Degraded Trust Score:", restrictedAgent.performance.trustScore);
+console.log("Degraded Composite Trust:", restrictedAgent.performance.trustScore);
+console.log("Security Context Score:", restrictedAgent.performance.trustProfile.contexts.security);
+console.log("Compliance Dimension:", restrictedAgent.performance.trustProfile.dimensions.compliance);
 console.log("Authority Level:", restrictedAgent.getAuthorityLevel());
 
 // 5. Traceability Check

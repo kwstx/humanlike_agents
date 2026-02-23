@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import TrustScoringEngine from '../reputation/TrustScoringEngine.js';
 
 /**
  * PersistentAgentIdentity
@@ -60,12 +61,23 @@ class PersistentAgentIdentity {
                     totalExpenses: 0,
                     netProfit: 0
                 },
-                budgetEfficiency: 1.0, // Default to neutral/optimal
+                budgetEfficiency: 1.0,
                 roi: 0.0,
-                cooperationScore: 1.0, // Default to cooperative
-                trustScore: 0.5,        // Initial baseline trust
+                cooperationScore: 1.0,
+                reliability: 1.0,
+                uptime: 1.0,
+                consistency: 1.0,
+                policyViolations: 0,
+                complianceHistory: 1.0,
+                riskExposure: 0.05,
+                taskSuccessRate: 1.0,
+                taskComplexityScore: 0.0,
+                trustProfile: null, // To be calculated
                 lastUpdated: this.metadata.creationTimestamp
             };
+            // Initial calculation
+            this.performance.trustProfile = TrustScoringEngine.calculateScore(this.performance);
+            this.performance.trustScore = this.performance.trustProfile.composite;
         }
 
         // Freeze instances to enforce immutability of the identity state
@@ -109,28 +121,18 @@ class PersistentAgentIdentity {
             lastUpdated: new Date().toISOString()
         };
 
-        // Recalculate trust score based on new performance data
-        nextPerformance.trustScore = this._calculateTrustScore(nextPerformance);
+        // Recalculate trust profile using the dedicated engine
+        nextPerformance.trustProfile = TrustScoringEngine.calculateScore(nextPerformance, this.metadata.versionHistory);
+        nextPerformance.trustScore = nextPerformance.trustProfile.composite;
 
-        return this.upgrade(reason, `Metrics updated: Trust Score now ${nextPerformance.trustScore.toFixed(3)}`, null, nextPerformance);
+        return this.upgrade(reason, `Metrics updated: Composite Trust now ${nextPerformance.trustScore.toFixed(3)}`, null, nextPerformance);
     }
 
     /**
-     * Core logic for determining agent trust based on economic and behavioral data.
-     * @private
+     * @deprecated Use TrustScoringEngine.calculateScore
      */
     _calculateTrustScore(p) {
-        // Simple weighted model:
-        // 30% Economic Profitability (ROI/PNL trend)
-        // 30% Budget Efficiency
-        // 40% Cooperative contribution
-
-        const economicFactor = Math.min(Math.max(p.roi / 100, 0), 1); // Normalize ROI
-        const efficiencyFactor = Math.min(Math.max(p.budgetEfficiency, 0), 1);
-        const cooperationFactor = Math.min(Math.max(p.cooperationScore, 0), 1);
-
-        const score = (economicFactor * 0.3) + (efficiencyFactor * 0.3) + (cooperationFactor * 0.4);
-        return parseFloat(score.toFixed(4));
+        return TrustScoringEngine.calculateScore(p).composite;
     }
 
     /**
