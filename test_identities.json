@@ -1263,6 +1263,60 @@
       },
       "revoked": false,
       "schemaVersion": 2
+    },
+    "did:agent:902eb225d4de1f2ed0e4a20b653f4afb30164f5f2b4eccdd361b94e030021f73": {
+      "id": "did:agent:902eb225d4de1f2ed0e4a20b653f4afb30164f5f2b4eccdd361b94e030021f73",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyO5HgMxzWk6D3p19XJGB\niGYhS4If3rU/COKnCuIGDA3XkDkCe02lp3dtaDN62VyxSLu8x83nzVBJTM2C3kXL\nrWD+zAMFfTLzGSt3GVTIylICUyfN9aaHCT7xd44dicFXS5xB3qneV6v6MDJapayg\nQAmvdxG+1UmrtCfVxGVYTjEZA2EHni5esLeTTL5DpLKHhMHfdOmXjz5oLIC3ddDi\n0BmjEtNeQ+biW8oS1UcczIwMVuvdtL6Aeb17ia759v5rAIwIzZ4v5bz/865gKHr5\n/7FKjmzCPhI4gVqKA2MJ4VaO4EyiQCENJupg9Rrz3qOFeNBJinQ4Pyd41PUqkegF\nMQIDAQAB\n-----END PUBLIC KEY-----\n",
+      "originSystem": "test-environment-alpha",
+      "metadata": {
+        "name": "AlphaAgent"
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:53:20.839Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "trustScore": 0.9325
+      },
+      "revoked": true,
+      "schemaVersion": 2,
+      "revocationReason": "Security cleanup",
+      "revocationTimestamp": "2026-02-23T23:53:20.855Z"
     }
   },
   "meta": {
@@ -1274,6 +1328,7 @@
     "did:agent:593f7e6042591d670e763c66b64f04cc43da7943f8f12cc919c28271fb17d809": 1771890362198,
     "did:agent:a2aaea3155c32ecfa852a81ec2325cf08c86ac7f8af8307df1486a581735e4aa": 1771890382617,
     "did:agent:18d112c382fc082599f071dc241b4b9dca59bb0a42d4fc6c55325deaebb1a049": 1771890382638,
-    "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647": 1771890382646
+    "did:agent:e3315546fbe15d92b4673c1260eb8a7879786dd5c26c53d93a8e6d770887f647": 1771890382646,
+    "did:agent:902eb225d4de1f2ed0e4a20b653f4afb30164f5f2b4eccdd361b94e030021f73": 1771890800845
   }
 }

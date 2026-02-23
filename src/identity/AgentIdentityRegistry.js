@@ -6,6 +6,7 @@ import { CURRENT_IDENTITY_SCHEMA_VERSION } from './models/IdentitySchemaVersion.
 class AgentIdentityRegistry {
     constructor(options = {}) {
         this.storePath = options.storePath || path.resolve(process.cwd(), 'agent_identities.json');
+        this.migrations = options.migrations || {}; // schemaVersion -> migration function
         this._loadStore();
     }
 
@@ -14,11 +15,39 @@ class AgentIdentityRegistry {
             try {
                 const raw = fs.readFileSync(this.storePath, 'utf8');
                 this.store = JSON.parse(raw);
+                this._performStoreMigration();
             } catch (e) {
+                console.error('Failed to load identity store, initializing fresh:', e.message);
                 this.store = { identities: {}, meta: { schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION }, lastActionTimestamps: {} };
             }
         } else {
             this.store = { identities: {}, meta: { schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION }, lastActionTimestamps: {} };
+        }
+    }
+
+    /**
+     * Automatically upgrade stored data if the schema version is behind.
+     */
+    _performStoreMigration() {
+        let currentVer = this.store.meta.schemaVersion || 1;
+
+        while (currentVer < CURRENT_IDENTITY_SCHEMA_VERSION) {
+            const nextVer = currentVer + 1;
+            const migrateFn = this.migrations[nextVer];
+
+            console.log(`Migrating Identity Registry Store from v${currentVer} to v${nextVer}...`);
+
+            if (migrateFn) {
+                this.store = migrateFn(this.store);
+            } else {
+                // Default migration: just bump individual identity schema versions if they are missing
+                Object.values(this.store.identities).forEach(identity => {
+                    if (!identity.schemaVersion) identity.schemaVersion = nextVer;
+                });
+            }
+
+            currentVer = nextVer;
+            this.store.meta.schemaVersion = currentVer;
         }
     }
 
@@ -54,7 +83,8 @@ class AgentIdentityRegistry {
             metadata: identity.metadata,
             performance: identity.performance,
             revoked: false,
-            schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION
+            schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION,
+            createdAt: new Date().toISOString()
         };
 
         this._saveStore();
@@ -138,24 +168,31 @@ class AgentIdentityRegistry {
         const before = JSON.parse(JSON.stringify(raw));
         const migrated = migrationFn(before);
 
-        const newVersion = migrated.metadata && migrated.metadata.identityVersion ? migrated.metadata.identityVersion : (before.metadata.identityVersion || '1.0.0');
+        // Ensure we preserve the historical record of versions within the identity itself
+        const identity = new PersistentAgentIdentity({
+            publicKey: migrated.publicKey || before.publicKey,
+            originSystem: migrated.originSystem || before.originSystem,
+            id: before.id,
+            metadata: migrated.metadata || before.metadata,
+            performance: migrated.performance || before.performance
+        });
 
-        // Create a new PersistentAgentIdentity to ensure invariants and version history update
-        const identity = new PersistentAgentIdentity({ publicKey: migrated.publicKey || before.publicKey, originSystem: migrated.originSystem || before.originSystem, id: before.id, metadata: migrated.metadata || before.metadata, performance: migrated.performance || before.performance });
+        const upgradedIdentity = identity.upgrade('SCHEMA_MIGRATION', details, null, migrated.performance);
 
-        // Overwrite stored record
+        // Overwrite stored record with new snapshot
         this.store.identities[id] = {
-            id: identity.id,
-            publicKey: identity.publicKey,
-            originSystem: identity.originSystem,
-            metadata: identity.metadata,
-            performance: identity.performance,
+            id: upgradedIdentity.id,
+            publicKey: upgradedIdentity.publicKey,
+            originSystem: upgradedIdentity.originSystem,
+            metadata: upgradedIdentity.metadata,
+            performance: upgradedIdentity.performance,
             revoked: before.revoked || false,
-            schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION
+            schemaVersion: CURRENT_IDENTITY_SCHEMA_VERSION,
+            updatedAt: new Date().toISOString()
         };
 
         this._saveStore();
-        return identity;
+        return upgradedIdentity;
     }
 }
 

@@ -56,6 +56,11 @@ class PersistentAgentIdentity {
         // Economic and Performance Metrics (First-class attributes)
         if (performance) {
             this.performance = performance;
+            // Ensure trustProfile exists even if reconstructing from old data
+            if (!this.performance.trustProfile) {
+                this.performance.trustProfile = TrustScoringEngine.calculateScore(this.performance, metadata ? metadata.versionHistory : []);
+                this.performance.trustScore = this.performance.trustProfile.composite;
+            }
         } else {
             this.performance = {
                 pnl: {
