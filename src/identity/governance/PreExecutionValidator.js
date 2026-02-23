@@ -56,15 +56,12 @@ class PreExecutionValidator {
      * 
      * @param {PersistentAgentIdentity} agent - The agent proposing the action
      * @param {Object} proposal - The proposal details
-     * @param {string} proposal.type - Type of action (e.g., 'TRANSACTION', 'SELF_MODIFICATION', 'DELEGATION')
-     * @param {number} proposal.impactScore - Estimated impact (0.0 to 1.0)
-     * @param {number} proposal.riskScore - Estimated risk (0.0 to 1.0)
-     * @param {number} [proposal.cost] - Financial cost if applicable
-     * @param {Array} [proposal.policyTags] - Tags representing policies this action touches
+     * @param {string} [context] - Optional reputation context (e.g., 'financial', 'compliance')
      * @returns {Object} { allowed: boolean, validationResults: Object, reason: string }
      */
-    static validate(agent, proposal) {
-        const profile = agent.getGovernanceProfile();
+    static validate(agent, proposal, context = null) {
+        const profile = agent.getGovernanceProfile(context);
+        const trustScore = agent.getTrustScore(context);
         const strictness = profile.validationStrictness;
         const config = this.STRICTNESS_LEVELS[strictness] || this.STRICTNESS_LEVELS.STANDARD;
 
@@ -72,7 +69,7 @@ class PreExecutionValidator {
             riskCheck: this._validateRisk(proposal, config),
             economicCheck: this._validateEconomics(proposal, config, profile),
             policyCheck: this._validatePolicies(proposal, config),
-            consensusCheck: this._validateConsensus(proposal, config, agent.performance.trustScore)
+            consensusCheck: this._validateConsensus(proposal, config, trustScore)
         };
 
         const failedChecks = Object.entries(results)
@@ -83,6 +80,7 @@ class PreExecutionValidator {
 
         return {
             allowed: isAllowed,
+            reputationContext: context || "COMPOSITE",
             strictnessLevel: strictness,
             validationResults: results,
             reason: isAllowed ? "VALIDATION_PASSED" : `VALIDATION_FAILED: ${failedChecks.join("; ")}`

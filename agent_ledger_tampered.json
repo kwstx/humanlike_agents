@@ -1,0 +1,103 @@
+{
+  "createdAt": "2026-02-23T23:30:17.756Z",
+  "entries": [
+    {
+      "index": 0,
+      "timestamp": "2026-02-23T23:30:17.743Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "DELEGATION",
+      "details": {
+        "delegatedTo": "agent:sub-123",
+        "scope": "DATA_FETCH",
+        "rationale": "Scale-out data ingestion"
+      },
+      "prevHash": null,
+      "hash": "0d74d79cd5f08a1d4ac01b51055981bd40ed9c732412aefdcbf54719830ba1c4",
+      "signature": "a53059fada2a3f8983e6046c13c7c93f0043f98eba28f61ec244a045a1a2d90e7d81ece6b272808cf7bc8f96b7529766f659cc6789cff8cb3cbfcba3fef58ca1c9ea6b9ddaee96db6225024af683a8924ac5835bdbadecf13d3654e1985fcd459c90ab56fc80d5c5dd2199611f1392b7526d6502a6faa418c2554551b6d0b4bcb91769431e362e1680aaab9512253880d116236e4b036ba6d3f24d511d969098bd5967b2f9fe1032fb1813ed3266551acc728ec1d5fe5a24be2a34ab1d85842826beea360f5ed0933816583f4d68818c97ae5ebef11b4791dd04a72eac7eee75da7d1376072bc004d3ab5876bef4751a5c835eb27ac46743f1bf67c787774ba7",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-02-23T23:30:17.747Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "NEGOTIATION",
+      "details": {
+        "counterparty": "agent:vendor-7",
+        "commitment": "DELIVER_BY_2026-03-01",
+        "terms": {
+          "price": 1200
+        }
+      },
+      "prevHash": "0d74d79cd5f08a1d4ac01b51055981bd40ed9c732412aefdcbf54719830ba1c4",
+      "hash": "cefbeab4f6b7f1691c06daa108bce77e765555e2dd210a40fe800500bea99967",
+      "signature": "48330a46f7b4233b03521f1edc6a910229a5442e501bf4c24d000e05db68f0b39fcc4fd24b380a462a2f46b6b8ca09c8389fcd7fd16166aeef093c842eef07ddfcab9be0fac870f8ee3618f9f7c61fc0fe5b78cff103696817bca2aa984949546b50cabaa9fc3b6c9268eea9e502f63ce1030d2e478290d2c2d5f6751dc966e1a9327f061da661e230e2ed399e7b667e8c7853918666fc3f54578b538c50e6a73285ba1a12bc08a16073b02d54e119cdf47d8ec0a605e6d04792cdd9f203ac50274e799632d76aa93e07ccf56aa90e26c2f7ea75fb09968caf05f2fbd82cb75b3b8d37fd1c50cbfa2fadc5409d410c760276da5751e797653b4b5dc46a318d4e",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    },
+    {
+      "index": 2,
+      "timestamp": "2026-02-23T23:30:17.749Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "ECONOMIC",
+      "details": {
+        "revenue": 5000,
+        "expense": 1200,
+        "pnl": 0,
+        "txId": "tx-789"
+      },
+      "prevHash": "cefbeab4f6b7f1691c06daa108bce77e765555e2dd210a40fe800500bea99967",
+      "hash": "bf7a1d3a985dfd802078272d65b71bd4450a4465e3d03a812f4142803441bd01",
+      "signature": "d392f7749f293af39fc360aa46f03d0bd416598664a3b1d7ff054760294dadcc172592b042c12fc0c49f9c99b14b45a41c26e9005818ff026219619c9c26f9979cc3754aedbf93c10006f033bdd19768d0fa78fc84c910c402f63fa6f883efce0fd24d7283b0ad78cc2bbc2cf9cca5e0f9a7f83ea83ba84c7a0074a21a37f0360fd43f791a1153708c0e537d0d52368ab3202d2e4613dab575986f6808878285d6c1da2e750fe88bf34d6965c911ebc2df356a1598f6f76a00bed60d579b8e973790742f64279fd9015d83866efab2415e3cf2d0c3731088935071cb2c2709f2a9074670ae93ae58a21498a6fb8accd59e17e8a2abfde584f627488304571bd8",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    },
+    {
+      "index": 3,
+      "timestamp": "2026-02-23T23:30:17.751Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "POLICY_VIOLATION",
+      "details": {
+        "policyId": "P-2",
+        "severity": "LOW",
+        "description": "Missing consent header"
+      },
+      "prevHash": "bf7a1d3a985dfd802078272d65b71bd4450a4465e3d03a812f4142803441bd01",
+      "hash": "12042d1305e412109a6876207ad4c06b5353bea613b82b0471a3f0d7c9d70c0f",
+      "signature": "79ec1011df10eaaf47a0f26f461cbdc63713642fc3d4efe3f2935ba52b7512be60abc6fb3f92c6eb0246d7793a880b069e8d33cdf381e3d63e63b5f0b614b7655428b66ce9b94ce6ccbad47703cc93b14b7901f610a01235050c5601d4269f1a8f241d62b02526a566e4b67e4d200fe44e8e8170ce97f6da5332e031bdb250821adb78549ff5767354aaa07169d0539831eb081c11e2ba8a065b0c763d3dd6f08856818dbbcef63068281a9109945e0a0db57e48db07270be014893da714fc67ab41b04ee3682055ca3a849cc600fa91dfd24708cbcfa654b69e0893c2e2f5d5509c60329fd5dfdc14a4869d99437472659be301e0f0024e9c5bab79f5cfe9ae",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    },
+    {
+      "index": 4,
+      "timestamp": "2026-02-23T23:30:17.753Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "SANDBOX_PROPOSAL",
+      "details": {
+        "sandboxId": "sbx-1",
+        "purpose": "A/B testing new model",
+        "resources": [
+          "cpu",
+          "gpu"
+        ]
+      },
+      "prevHash": "12042d1305e412109a6876207ad4c06b5353bea613b82b0471a3f0d7c9d70c0f",
+      "hash": "93e7ca0c4aed2132ecabccf3b0cc3abbaed8fe8dfc5dfbfb7d40335889e83477",
+      "signature": "7ed3dbd0ddbce0dca74924dcdc24d756c0a49e378fd26f5ca1908d8ea3525d90068ecd83852bb180f2935d38b72c45428503660d867f583db34fda03cbaad5b5db19f714770d102de5aa56530d9d34fd27646998eca735eae3015d18eda1875aa18c5ad7f0551d59d4d707ad7cc5753b9bcdcc7352e46b85bde665e03ff1ba1e4780058197031954f6f3144d6a1a58b6a7216b5ecf7dc93a8735892e9c8f3601748b8c542aaafdb22c4f5bab198a9b4cd43880da9cb9195808810d6d586c476627d4f6c3f7553d31c4ad86ea25f9f3a9f838189925816f3ccf60b1821c80735f3527bf2b679ab5e3e8304916ef4a20cb2a1940d0a9dc7ba80545ce473082d3a6",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    },
+    {
+      "index": 5,
+      "timestamp": "2026-02-23T23:30:17.754Z",
+      "agentId": "did:agent:a842482e1069eed3e97f5cb41d84fbece0350b5b27e140a31ae32a4051f99ba9",
+      "actionType": "COOPERATION",
+      "details": {
+        "partners": [
+          "agent:ally-9"
+        ],
+        "outcome": "SUCCESS",
+        "notes": "Coordinated training run"
+      },
+      "prevHash": "93e7ca0c4aed2132ecabccf3b0cc3abbaed8fe8dfc5dfbfb7d40335889e83477",
+      "hash": "7df680bc33dad18d5d32e562ab5922c41ab401d78247ea67a151af5fcb9dbc40",
+      "signature": "7cfe23ec02b5f4244a48ae577ad501b5a411a8e3342da8ebdc444ed180b01d630f889801726b9fbb311508d5facca88a5a2dba61bb31bfb36ed9c2b90f0530d65177fa7ff36e80c276e85b39cb59e32db9db625f972d65386f238bf2d1dac3f834108d786d72b42be587cbed46dd9cfcf36795702aaf5b5f4968f78a6867a368d97661d84a7ed9071c8bef4708c5376cc311ce98b478af354f974201e41f93c1051e63b6d03b18cd97bca5226000aba567ae3ef65a57286df9dcdcbb88f39e78879c3e1716934cc0247dae4d5b8b57b841cdb4c70fe92d4d2336b4003dabb1db4cfdd63f0e6414df7a5d9fd664bbcd218cabe470de03da86d50f0638c6bd9eed",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEA4hSmUofFAxBF7zQ5IcS4g91Wm8Wz5t6B1a31MiGjedUYyggEI8qO\nJNqD6mwBqNDzYo0WcX2bembhE5JGLE4Yq0sIFpn9Mi2dTj9ZH0n8KpNgBXzCQ4LD\nHGTcv5AprCqdUwIqV2C5O4fHLxTUWlicv3vnJqH9woeR188yCJCS7BSJRxAAp4f7\nOTrFbcV22YyTraqmyuMHiyLT9drzFdhE5JtwkOSkvM3zN0QptTEDemCcxVNoJOUp\nM9fioYek8IaoZFsHAbbqN1079+opUd3SLBKDCsZINDKpdouPl32zq1u74FyYLDUk\nD4M5i/zxSZ0F0/o7+Ladkoa6XExeP/ByjwIDAQAB\n-----END RSA PUBLIC KEY-----\n"
+    }
+  ]
+}

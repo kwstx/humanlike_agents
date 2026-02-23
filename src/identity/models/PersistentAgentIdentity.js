@@ -137,21 +137,45 @@ class PersistentAgentIdentity {
     }
 
     /**
+     * Gets the trust score for a specific context, or the composite score.
+     * 
+     * @param {string} [context] 
+     * @returns {number}
+     */
+    getTrustScore(context = null) {
+        if (context && this.performance.trustProfile && this.performance.trustProfile.contexts[context] !== undefined) {
+            return this.performance.trustProfile.contexts[context];
+        }
+        return this.performance.trustScore;
+    }
+
+    /**
      * Returns the authority level of the agent based on its trust score.
      * Used for delegation decisions.
+     * 
+     * @param {string} [context] - Optional reputation context (e.g., 'financial', 'compliance')
      */
-    getAuthorityLevel() {
-        return AdaptiveGovernanceEngine.getGovernanceProfile(this.performance.trustScore).level;
+    getAuthorityLevel(context = null) {
+        const score = this.getTrustScore(context);
+        return AdaptiveGovernanceEngine.getGovernanceProfile(score).level;
     }
 
     /**
      * Returns the full governance profile (limits, permissions, context)
      * based on current trust score.
      * 
+     * @param {string} [context] - Optional reputation context (e.g., 'financial', 'compliance')
      * @returns {Object}
      */
-    getGovernanceProfile() {
-        return AdaptiveGovernanceEngine.getGovernanceProfile(this.performance.trustScore);
+    getGovernanceProfile(context = null) {
+        const score = this.getTrustScore(context);
+        const profile = AdaptiveGovernanceEngine.getGovernanceProfile(score);
+
+        if (context) {
+            profile.reputationContext = context;
+        }
+
+        return profile;
     }
 
     /**

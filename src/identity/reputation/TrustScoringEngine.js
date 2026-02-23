@@ -123,17 +123,24 @@ class TrustScoringEngine {
 
     /**
      * Projections into specific trust contexts.
+     * Maps global dimensions into domain-specific utility scores.
      */
     static _projectContexts(d) {
         return {
-            // FINANCIAL: Heavy efficiency and safety
-            financial: parseFloat(((d.efficiency * 0.5) + (d.riskSafety * 0.3) + (d.competence * 0.2)).toFixed(4)),
+            // FINANCIAL: High focus on economic ROI, budget adherence, and risk mitigation.
+            financial: parseFloat(((d.efficiency * 0.6) + (d.riskSafety * 0.3) + (d.compliance * 0.1)).toFixed(4)),
 
-            // SECURITY: Heavy compliance and safety
-            security: parseFloat(((d.compliance * 0.5) + (d.riskSafety * 0.4) + (d.reliability * 0.1)).toFixed(4)),
+            // COLLABORATIVE: Focus on collective synergy, communication, and reliability.
+            collaborative: parseFloat(((d.cooperation * 0.7) + (d.reliability * 0.2) + (d.competence * 0.1)).toFixed(4)),
 
-            // COLLABORATIVE: Heavy cooperation and reliability
-            collaborative: parseFloat(((d.cooperation * 0.6) + (d.reliability * 0.2) + (d.competence * 0.2)).toFixed(4))
+            // COMPLIANCE: Heavy weighting on protocol adherence and historical alignment.
+            compliance: parseFloat(((d.compliance * 0.7) + (d.riskSafety * 0.2) + (d.reliability * 0.1)).toFixed(4)),
+
+            // TECHNICAL: Focus on task success rates, complexity handling, and efficiency.
+            technical: parseFloat(((d.competence * 0.6) + (d.efficiency * 0.3) + (d.reliability * 0.1)).toFixed(4)),
+
+            // SECURITY: Legacy/Specialized context for high-risk system access.
+            security: parseFloat(((d.compliance * 0.5) + (d.riskSafety * 0.4) + (d.reliability * 0.1)).toFixed(4))
         };
     }
 
