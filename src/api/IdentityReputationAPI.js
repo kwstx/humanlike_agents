@@ -5,6 +5,7 @@ import AgentActivityLedger from '../identity/governance/AgentActivityLedger.js';
 import TrustScoringEngine from '../identity/reputation/TrustScoringEngine.js';
 import ReputationEvolutionEngine from '../identity/reputation/ReputationEvolutionEngine.js';
 import TrustGraph from '../identity/reputation/TrustGraph.js';
+import PredictiveSynergyEngine from '../identity/reputation/PredictiveSynergyEngine.js';
 
 /**
  * IdentityReputationAPI
@@ -46,8 +47,9 @@ class IdentityReputationAPI {
             this.ledger = new AgentActivityLedger(this.registry);
         }
 
-        // Internal analysis component (rebuilt on demand)
+        // Internal analysis components (rebuilt on demand)
         this.trustGraph = new TrustGraph();
+        this.predictor = new PredictiveSynergyEngine(this.trustGraph);
     }
 
     /**
@@ -184,6 +186,44 @@ class IdentityReputationAPI {
         }
 
         return entry;
+    }
+
+    /**
+     * forecastSynergy
+     * Predicts the outcome and synergy score for a collaboration between two agents.
+     * 
+     * @param {string} agentId1 
+     * @param {string} agentId2 
+     * @returns {Object} Forecast results
+     */
+    forecastSynergy(agentId1, agentId2) {
+        this.getTrustGraph(); // Ensure graph is up-to-date
+        this.predictor = new PredictiveSynergyEngine(this.trustGraph);
+        return this.predictor.forecastSynergy(agentId1, agentId2);
+    }
+
+    /**
+     * forecastSystemicRisk
+     * Performs a system-wide risk assessment based on relationship structures.
+     * 
+     * @returns {Object} Risk analysis report
+     */
+    forecastSystemicRisk() {
+        this.getTrustGraph(); // Ensure graph is up-to-date
+        this.predictor = new PredictiveSynergyEngine(this.trustGraph);
+        return this.predictor.forecastSystemicRisk();
+    }
+
+    /**
+     * discoverOpportunities
+     * Finds agents with high synergistic potential who have not yet collaborated.
+     * 
+     * @returns {Array} List of synergy proposals
+     */
+    discoverOpportunities() {
+        this.getTrustGraph(); // Ensure graph is up-to-date
+        this.predictor = new PredictiveSynergyEngine(this.trustGraph);
+        return this.predictor.discoverHiddenSynergies();
     }
 }
 

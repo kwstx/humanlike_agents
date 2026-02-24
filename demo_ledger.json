@@ -1,0 +1,37 @@
+{
+  "createdAt": "2026-02-24T12:02:19.377Z",
+  "entries": [
+    {
+      "index": 0,
+      "timestamp": "2026-02-24T12:02:19.335Z",
+      "agentId": "did:agent:alpha-prime",
+      "actionType": "COOPERATIVE_COLLABORATION",
+      "details": {
+        "partners": [
+          "did:agent:beta-core"
+        ],
+        "outcome": "SUCCESS",
+        "quality": 0.9,
+        "cooperationScore": 1
+      },
+      "prevHash": null,
+      "hash": "038e3ac5f430410fd6bb0e15884f7bfa37a9f4c63d6d9ae54f23e19608e357fb",
+      "signature": "37c04d72b42ba78dd5f1e10f8a08f841fedeaaa55db6ccc351deeafceebd8bd0626553dedc250a3c849508d8cba69bc57b185d09b83e98c6c525ab4e55a88441b49b0b3115eefdcf4dc43d7f338041b40344739dbad7aaa79bb42890515612b3fc96f3c2312c283e7d48641bd9aade27d7cb07918c1309800aa1793df830bb2f87d23c8f733df8cf033b867dea90dd9f1c840a7ff596e7eb08f412c7dad752b9862c5c85f76b1f03dc33752a0b657b533b93b9d9f74d9d7800a0f2dfa334dd79dcdacc9f286684399a907e9945af366193d6448b769b13d783ca31376d0c1f8c24aac68426e32762f4c42f1464bd04d4b58bd719a4166cddcd983556403658e9",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsVnSqZlq6AWoE+5CzW2m\ny4G6ps+c+AKZwVmHSf3zmnLG+AgNt5B5MhzVaFYiSMOGWW6aFxDX6edphNjeAbQn\n5rzPc38wIYcO/LFlk4IMQ9pxzOhM+0CayMqsCvn/q8aE16HzKsc6Z/2YMwEZSIoZ\n1AznCXWCIwbpS62U/DRYK4/SSsszIJLiQC+Qv4UCrwr6IpRXKv/D/P6xVBmJ5GsT\nT27yUwdZ6l8MCOoMRkTAMzkm4TUNkQr7D+Zow4aoSxDP1B/xMws79QNzUvlsqdrd\n22bVXIM0kqu95YxaPD+TLnBMPewYgwEDGmHoIBtWla+bg9j0grMKCfuP6rMV2+0F\nYwIDAQAB\n-----END PUBLIC KEY-----\n"
+    },
+    {
+      "index": 1,
+      "timestamp": "2026-02-24T12:02:19.371Z",
+      "agentId": "did:agent:gamma-node",
+      "actionType": "POLICY_VIOLATION",
+      "details": {
+        "violationType": "SUDO_ESCALATION_ATTEMPT",
+        "severity": "HIGH"
+      },
+      "prevHash": "038e3ac5f430410fd6bb0e15884f7bfa37a9f4c63d6d9ae54f23e19608e357fb",
+      "hash": "7f3fb8b5e237a527d8b3aae60e5f87e0f49c9401f581c083c84f42258c2f2718",
+      "signature": "777a145f2f386784576d3e2a2c3ee17ff407e2e82dc2b81a71ea5063558ad040039c9991401d4c6875d6633cf1232d2c37e40531de48158a91680b893d6106c2ab5043b9cd8a35b3cb3a2feae6594c0cfe8f0b7610632dcc1ff7a5dec74d8d78e6128029da10ce79df77f63a9dc0facba50e79ff7a7742252cde1dc2c01afac20fab5761ed9d3ca2b572c25af27817acf9a950fdcdaaad091bb84870e85f408f4adac2f915013ea963363abb0f66385851fb3b08a858a26c76559226313dbdbe175ad4aee7fd198e4eb017c1b4aa01f6b98b4af586709ae379cf33325b9390109695cfdcf1c6f06d7f125ef9b0bcda10fd530d021485dd09174056a0ec2e324f",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApLGPWBxAf+Il4udUh2nl\nxoTizCNPl3NMsrB8sCwl804U+1zPw88Z1CbRRyEzxLoiLtm+CdBE0A0Yr5tya84L\nn73AEDRFeALNOxE+IdA+Nr930Chg52+BTg4/6TAPVNhLDvbyFnNL9rNHSPq8NX8T\nzXEfNF5OmneyTbB6TWJba9wU1w2BRcn0mt/UkymgO9Q2Gdhd+kiPlZwayUm1dooL\nWiEQIfU8p17wN7S12e/AYcuLLKLpazS/h0BpbGDEJga/nHvmeGDRn+lC5YbPXj8B\nms9fKquGk76iYnN+m+BD8mJIk9fGJtdJnDgB20WsqA9Jl/2MAmSKHdbuYLkoj8W7\n/wIDAQAB\n-----END PUBLIC KEY-----\n"
+    }
+  ]
+}
