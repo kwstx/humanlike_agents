@@ -37,7 +37,7 @@ function addDemoEntries() {
         agentId: identity.id,
         publicKey: identity.publicKey,
         privateKey: privatePem,
-        actionType: 'ECONOMIC',
+        actionType: 'ECONOMIC_OUTCOME',
         details: { revenue: 5000, expense: 1200, pnl: 3800, txId: 'tx-789' }
     });
 
@@ -54,14 +54,14 @@ function addDemoEntries() {
         publicKey: identity.publicKey,
         privateKey: privatePem,
         actionType: 'SANDBOX_PROPOSAL',
-        details: { sandboxId: 'sbx-1', purpose: 'A/B testing new model', resources: ['cpu','gpu'] }
+        details: { sandboxId: 'sbx-1', purpose: 'A/B testing new model', resources: ['cpu', 'gpu'] }
     });
 
     ledger.addEntry({
         agentId: identity.id,
         publicKey: identity.publicKey,
         privateKey: privatePem,
-        actionType: 'COOPERATION',
+        actionType: 'COOPERATIVE_COLLABORATION',
         details: { partners: ['agent:ally-9'], outcome: 'SUCCESS', notes: 'Coordinated training run' }
     });
 }

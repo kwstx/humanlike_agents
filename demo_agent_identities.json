@@ -61,12 +61,76 @@
       },
       "revoked": false,
       "schemaVersion": 2
+    },
+    "did:agent:557ed343347b95b24ff92d17867de2f950b1c40950abbebccbe8f0a72708abd5": {
+      "id": "did:agent:557ed343347b95b24ff92d17867de2f950b1c40950abbebccbe8f0a72708abd5",
+      "publicKey": "-----BEGIN RSA PUBLIC KEY-----\nMIIBCgKCAQEAyWDTnh8tEBSsr3zW3GHUq9oJLrNRqY6KV+l3JZUp8MU/GJRoKOHJ\ndoxJqI5MVuaCpI3XgaPCI9pOP5mJtDpPix3n09meyOTyCxczETUfSC5ku6iwb1Ir\ncRZf8ofU5eBywwjAnIQFRSZTM2iKcJreTv9KdO2sOMBo7cmR82HBJxYmYhGSoyIN\nV4duhbWDBe2gO0bdHxVxXNgQCHaANiziE9td0lhrawImmtaiZZCoqSTmXk/g949t\nPrOYh6Xj+0JD4k6yI2ri/MzXq+EXZWj5QoYybmw4d3HTEEruBkCUpy4PMjzML7C3\nkJPrgVLrsKOc1vfbI6O8RPhMXUn2w/6SxQIDAQAB\n-----END RSA PUBLIC KEY-----\n",
+      "originSystem": "unknown",
+      "metadata": {
+        "creationTimestamp": "2026-02-23T23:57:57.272Z",
+        "identityVersion": "1.0.0",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-23T23:57:57.272Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on unknown"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 1,
+        "reliability": 1,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-23T23:57:57.272Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-23T23:57:57.272Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2,
+      "createdAt": "2026-02-23T23:57:57.272Z"
     }
   },
   "meta": {
     "schemaVersion": 2
   },
   "lastActionTimestamps": {
-    "did:agent:14da2e20ddbf3b42d352c5d496ad6627a9fcde91d47a7d25649b51f3c5bd8ad0": 1771890308917
+    "did:agent:14da2e20ddbf3b42d352c5d496ad6627a9fcde91d47a7d25649b51f3c5bd8ad0": 1771890308917,
+    "did:agent:557ed343347b95b24ff92d17867de2f950b1c40950abbebccbe8f0a72708abd5": 1771891077282
   }
 }

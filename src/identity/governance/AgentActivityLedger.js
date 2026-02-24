@@ -14,6 +14,18 @@ class AgentActivityLedger {
         this.registry = registry; // optional AgentIdentityRegistry to validate identities/signatures
     }
 
+    static ACTION_TYPES = {
+        DELEGATION: 'DELEGATION',
+        NEGOTIATION: 'NEGOTIATION',
+        ECONOMIC_OUTCOME: 'ECONOMIC_OUTCOME',
+        POLICY_VIOLATION: 'POLICY_VIOLATION',
+        SANDBOX_PROPOSAL: 'SANDBOX_PROPOSAL',
+        COOPERATIVE_COLLABORATION: 'COOPERATIVE_COLLABORATION',
+        GOVERNANCE_PROFILE_APPLIED: 'GOVERNANCE_PROFILE_APPLIED',
+        PERMISSION_CHECK: 'PERMISSION_CHECK',
+        BUDGET_REQUEST: 'BUDGET_REQUEST'
+    };
+
     /**
      * Create a canonical representation of an entry for hashing/signing.
      */
@@ -43,12 +55,16 @@ class AgentActivityLedger {
      * @param {string} params.agentId - Persistent agent identifier
      * @param {string} params.publicKey - Agent public key (PEM)
      * @param {string} params.privateKey - Agent private key (PEM) used for signing
-     * @param {string} params.actionType - One of: DELEGATION, NEGOTIATION, ECONOMIC, POLICY_VIOLATION, SANDBOX_PROPOSAL, COOPERATION
+     * @param {string} params.actionType - One of AgentActivityLedger.ACTION_TYPES
      * @param {Object} params.details - Structured details about the action
      */
     addEntry({ agentId, publicKey, privateKey, actionType, details = {}, signature = null, originSystem = null }) {
         if (!agentId || !actionType) {
             throw new Error('agentId and actionType are required');
+        }
+
+        if (!Object.values(AgentActivityLedger.ACTION_TYPES).includes(actionType)) {
+            throw new Error(`Invalid actionType: ${actionType}. Must be one of ${Object.values(AgentActivityLedger.ACTION_TYPES).join(', ')}`);
         }
 
         const index = this.entries.length;
