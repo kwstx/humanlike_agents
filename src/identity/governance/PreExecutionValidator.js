@@ -1,3 +1,5 @@
+import AgentActivityLedger from './AgentActivityLedger.js';
+
 /**
  * PreExecutionValidator
  * 
@@ -8,6 +10,33 @@
  * based on the agent's current composite trust score and governance profile.
  */
 class PreExecutionValidator {
+    static _ledger = null;
+
+    /**
+     * Attach an AgentActivityLedger instance for recording validation events.
+     */
+    static attachLedger(ledger) {
+        this._ledger = ledger;
+    }
+
+    /**
+     * Helper to record an action.
+     */
+    static _record(agentContext, actionType, details) {
+        if (!this._ledger || !agentContext) return;
+        try {
+            this._ledger.addEntry({
+                agentId: agentContext.identity.id,
+                publicKey: agentContext.identity.publicKey,
+                privateKey: agentContext.privateKey,
+                actionType,
+                details
+            });
+        } catch (err) {
+            console.error('Failed to log validation to ledger:', err.message);
+        }
+    }
+
     /**
      * Validation Strictness Mapping
      * Defines how different strictness levels translate to internal logic.
@@ -57,9 +86,10 @@ class PreExecutionValidator {
      * @param {PersistentAgentIdentity} agent - The agent proposing the action
      * @param {Object} proposal - The proposal details
      * @param {string} [context] - Optional reputation context (e.g., 'financial', 'compliance')
+     * @param {Object} [agentContext] - { identity, privateKey } for ledger recording
      * @returns {Object} { allowed: boolean, validationResults: Object, reason: string }
      */
-    static validate(agent, proposal, context = null) {
+    static validate(agent, proposal, context = null, agentContext = null) {
         const profile = agent.getGovernanceProfile(context);
         const trustScore = agent.getTrustScore(context);
         const strictness = profile.validationStrictness;
@@ -78,13 +108,33 @@ class PreExecutionValidator {
 
         const isAllowed = failedChecks.length === 0;
 
-        return {
+        const validationOutcome = {
             allowed: isAllowed,
             reputationContext: context || "COMPOSITE",
             strictnessLevel: strictness,
             validationResults: results,
             reason: isAllowed ? "VALIDATION_PASSED" : `VALIDATION_FAILED: ${failedChecks.join("; ")}`
         };
+
+        // Record to ledger if possible
+        if (agentContext) {
+            // Record the proposal itself
+            this._record(agentContext, AgentActivityLedger.ACTION_TYPES.SANDBOX_PROPOSAL, {
+                proposal,
+                context: context || 'global'
+            });
+
+            // If it failed, record as a Policy Violation
+            if (!isAllowed) {
+                this._record(agentContext, AgentActivityLedger.ACTION_TYPES.POLICY_VIOLATION, {
+                    action: proposal.type || 'UNKNOWN',
+                    reason: validationOutcome.reason,
+                    severity: strictness === 'STRICT' || strictness === 'HIGH_FRICTION' ? 'HIGH' : 'MEDIUM'
+                });
+            }
+        }
+
+        return validationOutcome;
     }
 
     /**

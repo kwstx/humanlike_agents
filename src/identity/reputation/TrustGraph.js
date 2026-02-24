@@ -50,7 +50,7 @@ class TrustGraph {
                     }
                     break;
 
-                case 'COOPERATION':
+                case 'COOPERATIVE_COLLABORATION':
                     const partners = Array.isArray(details.partners) ? details.partners : (details.partners ? [details.partners] : []);
                     partners.forEach(partnerId => {
                         this._ensureNode(partnerId, agentIdentities.get(partnerId));
@@ -63,7 +63,7 @@ class TrustGraph {
                     });
                     break;
 
-                case 'ECONOMIC':
+                case 'ECONOMIC_OUTCOME':
                     const node = this.nodes.get(agentId);
                     node.performance.revenue += details.revenue || 0;
                     node.performance.pnl += details.pnl || 0;
