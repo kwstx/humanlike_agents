@@ -1,0 +1,79 @@
+{
+  "identities": {
+    "agent-001": {
+      "id": "agent-001",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo0A5ObC4Gd7PW2EW0z34\n6O4eqAHFlxTp+Mt9Z1JTNqnMico3nMI1iFwXFUQW+k4A1a38q679oQJa1xp8I0iV\nPWUXCDKXlNOXIyiKOxXGYLospBJPbyGdLiOLVspfmu+pL4MH+ud4Pi71jngLtS45\nCx9tmMhGpFLcchEzf8dokThkEh/KYD6bEwFx/tJs68MmPeCIQRoOYMViZfj60R72\nX8+7K0di7TARphS5NZf20rfujhpS61vHGifT1Y+B6bqdmgLxizG4hp2N0kN9q4Kg\nBm7ynIrCkr3O0AEELhiy8JbYcMiA/KTEf5ESTBpq1vXVVQlxnvb8TXr6SfqdlFXH\n9QIDAQAB\n-----END PUBLIC KEY-----\n",
+      "originSystem": "Test",
+      "metadata": {
+        "creationTimestamp": "2026-02-24T11:54:10.108Z",
+        "identityVersion": "1.0.1",
+        "versionHistory": [
+          {
+            "version": "1.0.0",
+            "timestamp": "2026-02-24T11:54:10.108Z",
+            "action": "IDENTITY_INITIALIZED",
+            "details": "Identity created on Test"
+          },
+          {
+            "version": "1.0.1",
+            "timestamp": "2026-02-24T11:54:10.143Z",
+            "action": "SCHEMA_MIGRATION",
+            "details": "REPUTATION_UPDATE"
+          }
+        ]
+      },
+      "performance": {
+        "pnl": {
+          "totalRevenue": 0,
+          "totalExpenses": 0,
+          "netProfit": 0
+        },
+        "budgetEfficiency": 1,
+        "roi": 0,
+        "cooperationScore": 0.61,
+        "reliability": 0.48,
+        "uptime": 1,
+        "consistency": 1,
+        "policyViolations": 0,
+        "complianceHistory": 1,
+        "riskExposure": 0.05,
+        "taskSuccessRate": 1,
+        "taskComplexityScore": 0,
+        "trustProfile": {
+          "composite": 0.9325,
+          "dimensions": {
+            "reliability": 1,
+            "efficiency": 0.7,
+            "cooperation": 1,
+            "compliance": 1,
+            "riskSafety": 0.95,
+            "competence": 0.9
+          },
+          "contexts": {
+            "financial": 0.805,
+            "collaborative": 0.99,
+            "compliance": 0.99,
+            "technical": 0.85,
+            "security": 0.98
+          },
+          "timestamp": "2026-02-24T11:54:10.109Z",
+          "metadata": {
+            "dataPoints": 1,
+            "engineVersion": "2.0.0"
+          }
+        },
+        "lastUpdated": "2026-02-24T11:54:10.141Z",
+        "trustScore": 0.9325
+      },
+      "revoked": false,
+      "schemaVersion": 2,
+      "updatedAt": "2026-02-24T11:54:10.143Z"
+    }
+  },
+  "meta": {
+    "schemaVersion": 2
+  },
+  "lastActionTimestamps": {
+    "agent-001": 1771934050113
+  }
+}

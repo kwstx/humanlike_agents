@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-02-24T11:56:52.301Z",
+  "entries": [
+    {
+      "index": 0,
+      "timestamp": "2026-02-24T11:56:52.293Z",
+      "agentId": "agent-001",
+      "actionType": "COOPERATIVE_COLLABORATION",
+      "details": {
+        "partners": [
+          "agent-002"
+        ],
+        "outcome": "SUCCESS",
+        "quality": 0.95,
+        "cooperationScore": 1
+      },
+      "prevHash": null,
+      "hash": "a9b1ee97c08e3f090f854bd652d3111bd3640f225229adc7ef849639d4fe4147",
+      "signature": "a6b2cd6657e3ed63817493679df38ac41fea09a7975b11aa2220217d294ea2d3e6c01f675a2792ff25422fc44dbfadfb17a7a257ded5e6bb3ee62592efd791945e82d588a758626d966f3273986ebaf32643f5d98237b8c2a2a5013dbcfaeac5ddd73cb69c73644c9dd7e4be8fa4cf1aefa163e387ffdefe5826532f4a9493b894262a83ab2b76e536484386fb7936eb8502f52f2c214809b620934c6a2c919a48a99f873c0701fe26fc809f8659c4ce5a73023ce3cdad4c7ce6861c81dc824626698f8e31e699be400e63f8d24255a23164ec9bcb74c2081d354db9a3b1292d8f58a450196f5ad14b5530d65bb0e29a69bbd235d7abb3e483943511902efdfd",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuEDhKxQtAIYIAF6HOK7L\nU7g6FJC/lQH+u5wNeiG1pMW8HPddmXn1hRnHYBGS/uZ4x/bwNthtLHe/6TknbiXX\nC0lig12fB1pThDOjbeqlJywvV/FjbsLy6z9VWaSCOp67HK+fcVpJ3C1nDeZHkq3G\ncMqFC+Sr3TvCKo9pI6c+0g3twKES+Ru10pGjuLDT5RwskEpIB4QMaUuvYR2dE8Nm\nhl7UwToPX9Mg4ex3Bba0YdLDkWBDQId68OX1mCupfmO7xHEdCXDNyW6mSvIU5mLY\njA8rQBKGU0B1tND/HU4+m18rgqtq9o6WysdxmqphgQ3rtZ7DJN1OsW3WbU7AWXsM\nfQIDAQAB\n-----END PUBLIC KEY-----\n"
+    }
+  ]
+}

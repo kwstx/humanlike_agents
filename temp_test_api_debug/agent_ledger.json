@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-02-24T11:54:10.136Z",
+  "entries": [
+    {
+      "index": 0,
+      "timestamp": "2026-02-24T11:54:10.113Z",
+      "agentId": "agent-001",
+      "actionType": "ECONOMIC_OUTCOME",
+      "details": {
+        "pnl": 100
+      },
+      "prevHash": null,
+      "hash": "8b8b97953d29c369b0919b2837c3f2d952e86fe2fa8c0fef0cc302a5537b398a",
+      "signature": "38e6117e27cc1dd6bfea0fe64cac3caffc14c891ac93cdffc861aedacc043df4c98e19d40fc3c785d4d2f57df3141111e8a93cb6f626fdbccc6f8143c56a856aa0b7757413e4a0936568218c79862c77b3e4fb3e0a90be63081de492e76ecdb6c7eef0405fc4dbd34b32871f7fd0e83606208c01bd4f7fd5e7846b50f1e3f39cab75f835ecb6566bfeb392decce3769bbfa25f5c4e14bd88fd91bbbf6316ff758b0dc533b2c4daf2dd34cacccadb82478f88726354f82192541839a7c50e648a53085613e2224296778af60c2d58967c00f6d463b622e7d7f68e2e0e35fbafe6846abe6becff4c6a6bf0b4fe777c8b9d530783fcce45906df336a3d96f424c33",
+      "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo0A5ObC4Gd7PW2EW0z34\n6O4eqAHFlxTp+Mt9Z1JTNqnMico3nMI1iFwXFUQW+k4A1a38q679oQJa1xp8I0iV\nPWUXCDKXlNOXIyiKOxXGYLospBJPbyGdLiOLVspfmu+pL4MH+ud4Pi71jngLtS45\nCx9tmMhGpFLcchEzf8dokThkEh/KYD6bEwFx/tJs68MmPeCIQRoOYMViZfj60R72\nX8+7K0di7TARphS5NZf20rfujhpS61vHGifT1Y+B6bqdmgLxizG4hp2N0kN9q4Kg\nBm7ynIrCkr3O0AEELhiy8JbYcMiA/KTEf5ESTBpq1vXVVQlxnvb8TXr6SfqdlFXH\n9QIDAQAB\n-----END PUBLIC KEY-----\n"
+    }
+  ]
+}

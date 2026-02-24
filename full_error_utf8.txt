@@ -1,0 +1,79 @@
+﻿--- IdentityReputationAPI Standalone Demo ---
+
+1. Generating cryptographic keys for 'Agent-001'...
+2. Registering agent with the API...
+   Registered: agent-001 on TestNetwork-Alpha
+
+3. Fetching Initial Trust Score...
+   Composite Score: 0.9325
+   Dimensions: {
+  reliability: 1,
+  efficiency: 0.7,
+  cooperation: 1,
+  compliance: 1,
+  riskSafety: 0.95,
+  competence: 0.9
+}
+
+4. Recording actions in the ledger...
+   Recording 'COOPERATIVE_COLLABORATION' (SUCCESS)...
+node : TypeError: Cannot 
+read properties of 
+undefined (reading 'split')
+At line:1 char:1
++ node --trace-uncaught 
+test_api.js > 
+full_error.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~
+    + CategoryInfo          
+    : NotSpecified: (TypeE  
+  rror: Cann...eading 'sp   
+ lit'):String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+    at PersistentAgentIdenti
+ty._incrementVersion (file:/
+//C:/Users/galan/humanlike_a
+gents/src/identity/models/Pe
+rsistentAgentIdentity.js:232
+:31)
+    at PersistentAgentIdenti
+ty.upgrade (file:///C:/Users
+/galan/humanlike_agents/src/
+identity/models/PersistentAg
+entIdentity.js:207:48)
+    at AgentIdentityRegistry
+.migrateIdentity (file:///C:
+/Users/galan/humanlike_agent
+s/src/identity/AgentIdentity
+Registry.js:180:43)
+    at IdentityReputationAPI
+.updateReputation (file:///C
+:/Users/galan/humanlike_agen
+ts/src/api/IdentityReputatio
+nAPI.js:95:23)
+    at IdentityReputationAPI
+.recordAction (file:///C:/Us
+ers/galan/humanlike_agents/s
+rc/api/IdentityReputationAPI
+.js:175:18)
+    at runDemo (file:///C:/U
+sers/galan/humanlike_agents/
+test_api.js:55:9)
+    at file:///C:/Users/gala
+n/humanlike_agents/test_api.
+js:120:1
+    at ModuleJob.run (node:i
+nternal/modules/esm/module_j
+ob:343:25)
+    at async onImport.traceP
+romise.__proto__ (node:inter
+nal/modules/esm/loader:665:2
+6)
+    at async asyncRunEntryPo
+intWithESMLoader (node:inter
+nal/modules/run_main:117:5)
